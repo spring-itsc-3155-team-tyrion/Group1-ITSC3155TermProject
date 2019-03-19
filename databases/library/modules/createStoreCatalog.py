@@ -18,8 +18,10 @@ def __main__(wd, numIngredientsPerStore, storeNum, availableIngredientList, stor
 def parseAvailableIngredients(wd, input):
 	os.chdir(wd + '/library/data')
 	
+	ingredientDictionary = {}
 	with open(input, 'r') as file:
 		for line in file:
 			if line.startswith('#'): pass
 			else: print(line.strip().split('\t'))
+			else: ingredientDictionary.add
 	file.close()

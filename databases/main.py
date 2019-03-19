@@ -21,7 +21,7 @@ except Exception as e:
 try:
 	print('\n-----Creating store catalogs----\n')
 	from library.modules import createStoreCatalog
-	for i in range(numStores): createStoreCatalog.__main__(mainDir, numIngredientsPerStore, i, availableIngredientsList)
+	for i in range(numStores): createStoreCatalog.__main__(mainDir, numIngredientsPerStore, i, availableIngredientsList, ('store' + str(i) + '.store'))
 	print('Done')
 except Exception as e:
 	print('Exception found during creating store catalogs: ' + str(e))

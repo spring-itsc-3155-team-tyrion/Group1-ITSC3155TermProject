@@ -9,8 +9,11 @@ chanceToBeOrganic = 30 #percent
 priceVariance = 10 #percent
 organicPriceMultiplier = 1.10
 numIngredientsPerStore = 100
+maxIngredientsPerRecipe = 10
+numRecipes = 100
 numIngredientsTotal = numIngredientsPerStore + numStores*20 #20 extra ingredients per store
 availableIngredientsList = 'availableIngredientList.list'
+recipesList = 'recipes.list'
 
 try:
 	print('\n-----Creating availble ingredient list-----\n')
@@ -28,6 +31,15 @@ try:
 	print('Done')
 except Exception as e:
 	print('Exception found during creating store catalogs: ' + str(e))
+	exit()
+
+try:
+	print('\n-----Creating recipe catalog-----\n')
+	from library.modules import createRecipeCatalog
+	createRecipeCatalog.__main__(mainDir, availableIngredientsList, maxIngredientsPerRecipe, numRecipes, recipesList)
+	print('Done')
+except Exception as e:
+	print('Exception found during creating recipe catalog: ' + str(e))
 	exit()
 
 print('')

@@ -5,6 +5,9 @@ import os
 ### parameters
 mainDir = os.getcwd()
 numStores = 4
+chanceToBeOrganic = 30 #percent
+priceVariance = 10 #percent
+organicPriceMultiplier = 1.10
 numIngredientsPerStore = 100
 numIngredientsTotal = numIngredientsPerStore + numStores*20 #20 extra ingredients per store
 availableIngredientsList = 'availableIngredientList.list'
@@ -21,8 +24,10 @@ except Exception as e:
 try:
 	print('\n-----Creating store catalogs----\n')
 	from library.modules import createStoreCatalog
-	for i in range(numStores): createStoreCatalog.__main__(mainDir, numIngredientsPerStore, i, availableIngredientsList, ('store' + str(i) + '.store'))
+	for i in range(numStores): createStoreCatalog.__main__(mainDir, organicPriceMultiplier, priceVariance, chanceToBeOrganic, numIngredientsPerStore, i, availableIngredientsList, ('store' + str(i) + '.store'))
 	print('Done')
 except Exception as e:
 	print('Exception found during creating store catalogs: ' + str(e))
 	exit()
+
+print('')

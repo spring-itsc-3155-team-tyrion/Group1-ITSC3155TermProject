@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li id="nav-logo"><a href="./index.html"><img src="budget-basket.png"></a></li>
+            <li><a href="./recipes.html">Available Recipes</a></li>
+            <li><a href="./basket.html">My Basket</a></li>
+            <li><a href="./calculation.html">Budget Calculation</a></li>
+            <li><a href="#">My Account</a></li>
+            
+        </ul>
+    </nav>
+<h1>My Basket</h1>
+
+<div id="basket-table">
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Recipe</th>
+            <th>Flag</th>
+            <th>Update</th>
+        </tr>
+        <tr>
+            <td>Chicken</td>
+            <td>Chicken Parmesan</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+            
+        </tr>
+        <tr>
+            <td>Breadcrumbs</td>
+            <td>Chicken Parmesan</td>
+            <td>Vegetarian</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+            
+        </tr>
+        <tr>
+            <td>Tomato Sauce</td>
+            <td>Chicken Parmesan</td>
+            <td>Vegetarian, Organic</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+            
+        </tr>
+    </table>
+</div>
+<br/>
+<div class="next-step-btn">
+    <button type="button" onclick="window.location.href='./calculation.html';">
+        Calculate My Budget
+    </button>
+</div>
+
+</body>
+</html>

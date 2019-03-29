@@ -13,43 +13,41 @@
 
 <nav id="main-nav">
         <ul>
-            <li id="nav-logo"><a href="./index.html"><img src="budget-basket.png"></a></li>
-            <li><a href="./recipes.html">Available Recipes</a></li>
-            <li><a href="./basket.html">My Basket</a></li>
-            <li><a href="./calculation.html">Budget Calculation</a></li>
-            <li><a href="#">My Account</a></li>
-            
+            <li id="nav-logo"><a href="/views/recipe/index.html.erb"><img src="/assets/budget-basket.png"></a></li>
+            <li><a href="/views/recipe/recipes.html.erb">Available Recipes</a></li>
+            <li><a href="/views/recipe/basket.html.erb">My Basket</a></li>
+            <li><a href="/views/recipe/calculation.html.erb">Budget Calculation</a></li>
         </ul>
     </nav>
 <div id="logo">
-    <img src="budget-basket.png"/>
+    <img src="/assets/budget-basket.png"/>
 </div>
 
 <div id="main-content">
     <div id="row-content">
         <div class="flex-four" id="one">
-            <img src="../assets/images/list.png">
+            <img src="/assets/list.png">
             <br/>
             <p>
                 Find A Recipe
             </p>
         </div>
         <div class="flex-four" id="two">
-            <img src="../assets/images/basket.png">
+            <img src="/assets/basket.png">
             <br/>
             <p>
                 Build A Basket
             </p>
         </div>
         <div class="flex-four" id="three">
-            <img src="../assets/images/dollar-sign-symbol.png">
+            <img src="/assets/dollar-sign-symbol.png">
             <br/>
             <p>
                 Budget Your Basket
             </p>
         </div>
         <div class="flex-four" id="four">
-            <img src="../assets/images/groceries.png">
+            <img src="/assets/groceries.png">
             <br/>
             <p>
                 Shop Your Budget
@@ -58,7 +56,7 @@
     </div>
     <br/>
     <div class="next-step-btn">
-        <button type="button" onclick="window.location.href='./recipes.html';">
+        <button type="button" onclick="window.location.href='/views/recipes.html.erb';">
             Check Out Our Recipes
         </button>
     </div>

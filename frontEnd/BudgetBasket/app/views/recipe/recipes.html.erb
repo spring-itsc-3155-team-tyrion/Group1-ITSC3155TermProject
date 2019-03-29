@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li id="nav-logo"><a href="./app/views/recipe/index.html"><img src="./app/assets/images/budget-basket.png"></a></li>
+            <li><a href="./app/views/recipe/recipes.html">Available Recipes</a></li>
+            <li><a href="./app/views/recipe/basket.html">My Basket</a></li>
+            <li><a href="./app/views/recipe/calculation.html">Budget Calculation</a></li>
+            
+        </ul>
+    </nav>
+<h1>Available Recipes</h1>
+<div id="recipes-table">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Flags</th>
+            <th>Select</th>
+        </tr>
+        <tr>
+            <td>Chicken Parmesan</td>
+            <td>Breaded chicken breast covered in tomato sauce and mozzarella, parmesan, or provolone cheese.</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+        </tr>
+        <tr>
+            <td>Lorem Ipsum</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+        </tr>
+        <tr>
+            <td>Lorem Ipsum</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+        </tr>
+        <tr>
+            <td>Lorem Ipsum</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio ante, lacinia in metus non, tempus consectetur nulla. Vestibulum rhoncus.</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+        </tr>
+        <tr>
+            <td>Lorem Ipsum</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio ante, lacinia in metus non, tempus consectetur nulla. Vestibulum rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla odio ante, lacinia in metus non, tempus consectetur nulla. Vestibulum rhoncus.</td>
+            <td>None</td>
+            <td><input type="checkbox" name="select-recipe" /></td>
+        </tr>
+    </table>
+</div>
+<br/>
+<div class="next-step-btn">
+        <button type="button" onclick="window.location.href='./app/views/recipe/basket.html.erb';">
+            Add Recipe(s) to Basket
+        </button>
+    </div>
+
+
+</body>
+</html>

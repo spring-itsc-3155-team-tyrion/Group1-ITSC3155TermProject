@@ -6,6 +6,9 @@ body, html{
 h1{
     text-align:center;
 }
+.active{
+    font-weight: bold;
+}
 #main-content{
     flex: 1 0 auto;
     padding: 0px 50px 0px 50px;
@@ -36,7 +39,7 @@ h1{
    margin: 0 auto;
    
 }
-.next-step-btn button{
+.next-step-btn .button{
     display:block;
     padding: 20px !important;
     border-radius: 5px;
@@ -46,8 +49,10 @@ h1{
     margin:0 auto;
     text-align:center;
     margin-top: 100px;
+    max-width: 250px;
+    text-decoration: none;
 }
-.next-step-btn button:hover{
+.next-step-btn .button:hover{
    background-color: #ff0000;
    cursor:pointer;
 }

@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  get 'recipe/index'
+  get '/allRecipes' => 'recipes#allRecipes'
+  get '/basket' => 'recipes#basket'
+  get '/calculation' => 'recipes#calculation'
+  root 'recipes#home'
   
-  root 'recipe#index'
+  
+  
+  
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

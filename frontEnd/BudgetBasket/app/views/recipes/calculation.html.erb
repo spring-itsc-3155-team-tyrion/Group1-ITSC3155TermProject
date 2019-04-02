@@ -3,18 +3,20 @@
 <html>
 <head>
     <title>Calculation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body>
     <nav id="main-nav">
         <ul>
-            <li id="nav-logo"><a href="./index.html"><img src="budget-basket.png"></a></li>
-            <li><a href="./recipes.html">Available Recipes</a></li>
-            <li><a href="./basket.html">My Basket</a></li>
-            <li><a href="./calculation.html">Budget Calculation</a></li>
-            <li><a href="#">My Account</a></li>
-            
+            <li id="nav-logo">
+                <%= link_to root_path do %>
+                     <%= image_tag "budget-basket.png" %>
+                <% end %>
+            </li>
+            <li><%= link_to "All Recipes", allRecipes_path %></li>
+            <li><%= link_to "Basket Ingredients", basket_path %></li>
+            <li><%= link_to "Calculate Budget", calculation_path, class:"active"%></li>
         </ul>
     </nav>
     <h1>Basket Calculations</h1>

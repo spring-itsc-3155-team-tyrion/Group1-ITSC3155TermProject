@@ -6,17 +6,22 @@
     <meta name="description" content="Budget Basket">
     <meta name="author" content="Sarah Taylor">
     
-    <link rel="stylesheet" href="../assets/styelsheets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <%= csrf_meta_tags %>
 </head>
 
 <body>
 
 <nav id="main-nav">
         <ul>
-            <li id="nav-logo"><a href="/views/recipe/index.html.erb"><img src="/assets/budget-basket.png"></a></li>
-            <li><a href="/views/recipe/recipes.html.erb">Available Recipes</a></li>
-            <li><a href="/views/recipe/basket.html.erb">My Basket</a></li>
-            <li><a href="/views/recipe/calculation.html.erb">Budget Calculation</a></li>
+            <li id="nav-logo">
+                <%= link_to root_path do %>
+                     <%= image_tag "budget-basket.png" %>
+                <% end %>
+            </li>
+            <li><%= link_to "All Recipes", allRecipes_path %></li>
+            <li><%= link_to "Basket Ingredients", basket_path %></li>
+            <li><%= link_to "Calculate Budget", calculation_path %></li>
         </ul>
     </nav>
 <div id="logo">
@@ -56,9 +61,7 @@
     </div>
     <br/>
     <div class="next-step-btn">
-        <button type="button" onclick="window.location.href='/views/recipes.html.erb';">
-            Check Out Our Recipes
-        </button>
+            <%= link_to "Check Out Our Recipes", allRecipes_path, class: "button" %>
     </div>
 </div>
 

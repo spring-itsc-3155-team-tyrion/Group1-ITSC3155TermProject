@@ -86,4 +86,4 @@ def recipe_params
   params.require(:recipes).permit(:recipe_name, :ingredients)
 end
 
-end
+

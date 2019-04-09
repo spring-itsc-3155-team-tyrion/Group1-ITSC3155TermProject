@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li id="nav-logo">
+                <%= link_to root_path do %>
+                     <%= image_tag "budget-basket.png" %>
+                <% end %>
+            </li>
+            <li><%= link_to "All Recipes", allRecipes_path %></li>
+            <li><%= link_to "Basket Ingredients", basket_path, class:"active" %></li>
+            <li><%= link_to "Calculate Budget", calculation_path %></li>
+        </ul>
+    </nav>
+<h1>My Basket</h1>
+
+<div id="basket-table">
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Recipe</th>
+            <th>Flag</th>
+            <th>Update</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<br/>
+<div class="next-step-btn">
+    <%= link_to "Calculate My Budget", calculation_path, class: "button" %>
+</div>
+
+</body>
+</html>

@@ -17,7 +17,7 @@ def parseItems():
 	return(itemDictionary)
 
 def writeIngredientDictionary(dictionary):
-	with open('ingredientModofiedList.sample', 'w') as chunk:
+	with open('ingredientModifiedList.sample', 'w') as chunk:
 		chunk.write('#ingredient_name\tingredient_count\tingredient_tag\n')
 		for key in dictionary:
 			chunk.write(key)

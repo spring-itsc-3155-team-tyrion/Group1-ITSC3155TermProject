@@ -4,6 +4,7 @@ import os
 
 ### parameters
 mainDir = os.getcwd()
+ingredientList = 'ingredientModifiedList.sample'
 
 try:
 	print('\n-----Creating price matrix -----\n')
@@ -13,3 +14,5 @@ try:
 except Exception as e:
 	print('Exception found during creating price matrix: ' + str(e))
 	exit()
+
+print('')

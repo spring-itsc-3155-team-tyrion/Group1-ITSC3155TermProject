@@ -21,3 +21,8 @@ class BasketsController < ApplicationController
         redirect_to recipes_path
     end
 end
+
+private
+    def basket_params
+        params.require(:basket).permit(:ingredient_name, :ingredient_count, :ingredient_organic)
+    end

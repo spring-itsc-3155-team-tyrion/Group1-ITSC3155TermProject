@@ -146,3 +146,6 @@ nav ul li a:hover{
 .hidden{
    display: none;
 }
+.active{
+    color: white;
+}

@@ -13,7 +13,8 @@ def __main__(wd, availableIngredientList, maxIngredientsPerRecipe, numRecipes, r
 		
 		for i in range(numRecipes):
 			recipe = createRecipe(ingredientDictionary, maxIngredientsPerRecipe)
-			chunk.write('recipe_' + str(i))
+#			chunk.write('recipe_' + str(i))
+			chunk.write('recipe_' + ('%0' + str(len(str(numRecipes))) + 'd') % i)
 			for ingredient in recipe: chunk.write('\t' + ingredient)
 			chunk.write('\n')
 			

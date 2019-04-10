@@ -30,12 +30,14 @@
             <th>Flag</th>
             <th>Update</th>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+        <% if false %>
+         <% @baskets.each do |basket| %>
+           <tr>
+               <td><%= basket.name %></td>
+               <td><input type="checkbox" name="select-recipe" /></td>
+           </tr>
+        <% end %>
+        <% end %>
     </table>
 </div>
 <br/>

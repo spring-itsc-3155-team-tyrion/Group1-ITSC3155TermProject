@@ -27,11 +27,13 @@
     <table>
         <tr>
             <th>Name</th>
+            <th>Ingredients</th>
             <th>Select</th>
         </tr>
         <% @recipes.each do |recipe| %>
            <tr>
-               <td><%= recipe.name %></td>
+               <td><%= recipe.recipe_name %></td>
+               <td><%= recipe.recipe_ingredient_array %></td>
                <td><input type="checkbox" name="select-recipe" /></td>
            </tr>
         <% end %>

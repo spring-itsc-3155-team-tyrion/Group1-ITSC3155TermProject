@@ -19,15 +19,21 @@ class RecipesController < ApplicationController
     
     def addRecipeToBasket
         @recipe = Recipe.find(params[:recipe])
-        #system (Dir.pwd + '/scripts/addRecipeToBasket.py')
-        system ("echo 'add recipe '" + @recipe.recipe_name)
+        
+        for ingredient in @recipe.recipe_ingredient_array do
+            #if ingredient in Basket ActiveRecord
+                #increment ingredient_count in Basket
+            else
+                @basket = Basket.new(:ingredient_name => ingredient, :ingredient_count => 1, :ingredient_organic => false)
+                @basket.save
+            end
+        end
         
         redirect_to allRecipes_path
     end
     
     def deleteRecipeFromBasket
         @recipe = Recipe.find(params[:recipe])
-        #system (Dir.pwd + '/scripts/deleteRecipeFromBasket.py')
         system ("echo 'delete recipe '" + @recipe.recipe_name)
         
         redirect_to allRecipes_path

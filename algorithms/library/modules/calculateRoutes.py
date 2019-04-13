@@ -15,7 +15,7 @@ def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList):
             storeWithBestPriceMatrix = information['storeWithBestPriceMatrix']
             completelyUnavailableIngredients = information['completelyUnavailableIngredients']
             substitutedIngredients = information['substitutedIngredients']
-            '''
+            
             print('Total Number of Ingredients: ' + str(len(ingredientDictionary.keys())) + ' (Should be the number of completelyUnavailableIngredients + number of found original ingredients)\n')    
             print('Number of found original ingredients (storeWithBestPriceMatrix): ' + str(len(storeWithBestPriceMatrix.keys())))
             print(storeWithBestPriceMatrix)
@@ -25,7 +25,7 @@ def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList):
             print('\n')
             print('Number of substitutedIngredients: ' + str(len(substitutedIngredients)))
             print(substitutedIngredients)
-            '''
+            
             results = calculateRoute_bestPrice(coordinateMatrix, storeWithBestPriceMatrix)
             shortestPermutation = results[0]
             shortestPermutationDistance = results[1]
@@ -79,6 +79,8 @@ def getInformation_bestPrice(priceMatrix, ingredientDictionary):
     
     return({'storeWithBestPriceMatrix': storeWithBestPriceMatrix, 'completelyUnavailableIngredients': completelyUnavailableIngredients, 'substitutedIngredients': substitutedIngredients})
     
+
+#this looks at raw store prices, not the user quantity (AKA this metho assumes that the user selected one of every item in list)
 def calculateRoute_bestPrice(coordinateMatrix, storeWithBestPriceMatrix): #this method generates one defined root to be the shortest where in all actuality for every route, there is an identical, reverse route. It is arbitrary which is selected. So if there are n routes generated, there are n/2 unique routes.
     stores = []
     for key in storeWithBestPriceMatrix:

@@ -21,9 +21,6 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find(params[:recipe])
         
         for ingredient in @recipe.recipe_ingredient_array do
-            puts "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-            puts ingredient
-            puts Basket.exists?(ingredient_name: ingredient)
             if Basket.exists?(ingredient_name: ingredient)
                 @basket = Basket.find_by(ingredient_name: ingredient)
                 @basket.ingredient_count = @basket.ingredient_count + 1

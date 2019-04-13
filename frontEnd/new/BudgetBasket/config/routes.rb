@@ -5,8 +5,9 @@ Rails.application.routes.draw do
     get '/calculation' => 'baskets#calculation'
     
     get 'button' => 'start_up#button'
-    get 'addRecipeToBasketButton' => 'recipes#addRecipeToBasket'
-    get 'deleteRecipeFromBasketButton' => 'recipes#deleteRecipeFromBasket'
+    get 'addRecipeToBasket' => 'recipes#addRecipeToBasket'
+    get 'deleteRecipeFromBasket' => 'recipes#deleteRecipeFromBasket'
+    get 'switchOrganicState' => 'baskets#switchOrganicState'
     
     root 'recipes#home'
 end

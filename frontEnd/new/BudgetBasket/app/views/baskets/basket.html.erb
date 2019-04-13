@@ -29,14 +29,12 @@
             <th>Count</th>
             <th>Organic?</th>
         </tr>
-        <% if false %>
          <% @baskets.each do |basket| %>
            <tr>
                <td><%= basket.ingredient_name %></td>
                <td><%= basket.ingredient_count %></td>
                <td><input type="checkbox" name="select-organic" /></td>
            </tr>
-        <% end %>
         <% end %>
     </table>
 </div>

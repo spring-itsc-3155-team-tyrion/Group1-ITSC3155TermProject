@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     get '/basket' => 'baskets#basket'
     get '/calculation' => 'baskets#calculation'
     get 'button' => 'start_up#button'
+    get 'addRecipeToBasketButton' => 'recipes#addRecipeToBasket'
+    get 'deleteRecipeFromBasketButton' => 'recipes#deleteRecipeFromBasket'
     root 'recipes#home'
 end

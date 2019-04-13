@@ -2,6 +2,7 @@ class RecipesController < ApplicationController
     def allRecipes
         @recipes = Recipe.all
     end
+    
     def create
         @recipe = Recipe.new(recipe_params)
         
@@ -16,6 +17,17 @@ class RecipesController < ApplicationController
         redirect_to recipes_path
     end
     
+    def addRecipeToBasket()
+        system (Dir.pwd + '/scripts/addRecipeToBasket.py')
+        
+        redirect_to recipe_path
+    end
+    
+    def deleteRecipeFromBasket()
+        system (Dir.pwd + '/scripts/deleteRecipeFromBasket.py')
+        
+        redirect_to recipe_path
+    end
 end
 
 private

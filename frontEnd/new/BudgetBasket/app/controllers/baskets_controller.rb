@@ -1,10 +1,6 @@
 class BasketsController < ApplicationController
-    
-    def basket
-       # @baskets = Basket.all
-    end
-    
-    def calculation
+    def allBaskets
+        @baskets = Basket.all
     end
     
     def create

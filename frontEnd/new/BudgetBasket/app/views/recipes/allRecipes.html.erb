@@ -36,8 +36,8 @@
                <td><%= recipe.recipe_name %></td>
                <td><%= recipe.recipe_ingredient_array %></td>
                <td>
-                   <button onclick = "addRecipeToBasket(recipe.recipe_ingredient_array)">Add</button>
-                   <button onclick = "deleteRecipeFromBasket(recipe.recipe_ingredient_array)">Delete</button>
+                   <!--<button onclick = "addRecipeToBasket(recipe.recipe_ingredient_array)">Add</button>-->
+                   <!--<button onclick = "deleteRecipeFromBasket(recipe.recipe_ingredient_array)">Delete</button>-->
                </td>
            </tr>
         <% end %>
@@ -49,7 +49,7 @@
         <%= link_to "Add Recipe(s) to Basket", basket_path, class: "button" %>
     </div>
 
-
+<!--
 <script>
     function addRecipeToBasket(arr) {
         //implement
@@ -58,6 +58,7 @@
         //ignore for now
     }
 </script>
+-->
 
 </body>
 </html>

@@ -4,6 +4,7 @@
 <head>
     <title>Calculation</title>
     <link rel="stylesheet" href="../assets/style.css">
+    <script src="../assets/canvas.js"></script>
 </head>
 
 <body>
@@ -23,21 +24,25 @@
     <div id="calculation-content">
         <div class="calculation">
             <div class="route">
-                <p>This is where the route will go.</p>
+                <p class="p-canvas">
+                <canvas id="route-map" height= "200px" width="200px"></canvas>
+                </p>
+                <div class="store-key">
+                
+                </div>
+                
+                <button type="button" class="draw-canvas" onclick="drawCanvas()">Draw Canvas</button>
+                
             </div>
-            <br>
+            
+            
+            <div class="route-info">
+                <h2>Route #1</h2>
+                <p>These items were not found</p>
+            </div>
+            
             <div class="total">
-                <p>Total Amount</p>
-            </div>
-        </div>
-        <div class="calculation">
-            <div class="route">
-                <p>This is where the route will go.</p>
-            </div>
-        </div>
-        <div class="calculation">
-            <div class="route">
-                <p>This is where the route will go.</p>
+                <p>Total: $123.45</p>
             </div>
         </div>
     </div>

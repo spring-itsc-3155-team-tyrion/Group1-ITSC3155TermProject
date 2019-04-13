@@ -3,5 +3,6 @@ Rails.application.routes.draw do
     get '/allRecipes' => 'recipes#allRecipes'
     get '/basket' => 'baskets#basket'
     get '/calculation' => 'baskets#calculation'
+    get 'button' => 'start_up#button'
     root 'recipes#home'
 end

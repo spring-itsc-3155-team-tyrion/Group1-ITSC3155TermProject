@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2019_04_10_200958) do
   create_table "baskets", force: :cascade do |t|
     t.string "ingredient_name"
     t.integer "ingredient_count"
-    t.boolean "ingredient_organic", null: false
+    t.boolean "ingredient_organic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

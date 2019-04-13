@@ -36,6 +36,8 @@
                <td><%= recipe.recipe_name %></td>
                <td><%= recipe.recipe_ingredient_array %></td>
                <td>
+                   <%= link_to 'Add', {:controller => "recipes", :action => "addRecipeToBasket", :recipe => recipe.id}, :class => 'btn btn-primary'%>
+                   <%= link_to 'Delete', {:controller => "recipes", :action => "deleteRecipeFromBasket", :recipe => recipe.id}, :class => 'btn btn-primary'%>
                    <!--<button onclick = "addRecipeToBasket(recipe.recipe_ingredient_array)">Add</button>-->
                    <!--<button onclick = "deleteRecipeFromBasket(recipe.recipe_ingredient_array)">Delete</button>-->
                </td>

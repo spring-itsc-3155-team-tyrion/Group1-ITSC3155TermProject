@@ -14,19 +14,23 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find(params[:id])
         @recipe.destroy
         
-        redirect_to recipes_path
+        redirect_to allRecipes_path
     end
     
-    def addRecipeToBasket()
-        system (Dir.pwd + '/scripts/addRecipeToBasket.py')
+    def addRecipeToBasket
+        @recipe = Recipe.find(params[:recipe])
+        #system (Dir.pwd + '/scripts/addRecipeToBasket.py')
+        system ("echo 'add recipe '" + @recipe.recipe_name)
         
-        redirect_to recipes_path
+        redirect_to allRecipes_path
     end
     
-    def deleteRecipeFromBasket()
-        system (Dir.pwd + '/scripts/deleteRecipeFromBasket.py')
+    def deleteRecipeFromBasket
+        @recipe = Recipe.find(params[:recipe])
+        #system (Dir.pwd + '/scripts/deleteRecipeFromBasket.py')
+        system ("echo 'delete recipe '" + @recipe.recipe_name)
         
-        redirect_to recipes_path
+        redirect_to allRecipes_path
     end
 end
 

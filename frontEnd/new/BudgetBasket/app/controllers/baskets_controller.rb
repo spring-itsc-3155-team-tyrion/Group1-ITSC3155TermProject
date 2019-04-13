@@ -22,13 +22,7 @@ class BasketsController < ApplicationController
     
     def switchOrganicState
         @basket = Basket.find(params[:basket])
-        #if @basket.ingredient_organic == false
-            #@basket.ingredient_organic = true
-        #else
-            #@basket.ingredient_organic = false 
-        #end
         @basket.ingredient_organic = !@basket.ingredient_organic
-        
         @basket.save
         
         redirect_to basket_path

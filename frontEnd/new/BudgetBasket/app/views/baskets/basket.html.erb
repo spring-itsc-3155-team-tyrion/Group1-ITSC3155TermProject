@@ -28,15 +28,14 @@
             <th>Item</th>
             <th>Count</th>
             <th>Organic?</th>
+            <th>Switch</th>
         </tr>
          <% @baskets.each do |basket| %>
            <tr>
                <td><%= basket.ingredient_name %></td>
                <td><%= basket.ingredient_count %></td>
-               <td><input type="checkbox" name="select-organic" /></td>
-               <td>
-                   <%= link_to 'Switch to Organic', {:controller => "baskets", :action => "switchOrganicState", :basket => basket.id}, :class => 'btn btn-primary'%>
-               </td>
+               <td><%= basket.ingredient_organic %></td>
+               <td><%= link_to 'Switch Organic Status', {:controller => "baskets", :action => "switchOrganicState", :basket => basket.id}, :class => 'btn btn-primary'%></td>
            </tr>
         <% end %>
     </table>

@@ -72,9 +72,15 @@
 <script>
     function populateActiveRecord() {
         $.ajax({
-            type: "POST"
-            url: "/scripts/autoPopulateActiveRecords.py"
+            type: "POST",
+            url: "../../../test.py",
+            data: {},
+            success: callBack
         })
+    }
+    function callBack(response) {
+        alert("working");
+        console.log(response);
     }
 </script>
 

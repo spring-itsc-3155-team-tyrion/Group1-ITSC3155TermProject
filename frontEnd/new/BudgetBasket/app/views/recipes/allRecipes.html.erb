@@ -26,17 +26,22 @@
 <div id="recipes-table">
     <table>
         <tr>
-            <th>Name</th>
-            <th>Ingredients</th>
-            <th>Select</th>
+            <th>Recipe Name</th>
+            <th>Ingredients in Recipe</th>
+            <th>Recipe Action</th>
         </tr>
+        
         <% @recipes.each do |recipe| %>
            <tr>
                <td><%= recipe.recipe_name %></td>
                <td><%= recipe.recipe_ingredient_array %></td>
-               <td><input type="checkbox" name="select-recipe" /></td>
+               <td>
+                   <button onclick = "addRecipeToBasket(recipe.recipe_ingredient_array)">Add</button>
+                   <button onclick = "deleteRecipeFromBasket(recipe.recipe_ingredient_array)">Delete</button>
+               </td>
            </tr>
         <% end %>
+        
     </table>
 </div>
 <br/>
@@ -44,6 +49,15 @@
         <%= link_to "Add Recipe(s) to Basket", basket_path, class: "button" %>
     </div>
 
+
+<script>
+    function addRecipeToBasket() {
+        //implement
+    }
+    function deleteRecipeFromBasket() {
+        //ignore for now
+    }
+</script>
 
 </body>
 </html>

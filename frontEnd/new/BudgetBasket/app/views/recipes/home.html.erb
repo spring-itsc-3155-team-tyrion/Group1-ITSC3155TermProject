@@ -63,7 +63,20 @@
     <div class="next-step-btn">
             <%= link_to "Check Out Our Recipes", allRecipes_path, class: "button" %>
     </div>
+    <div style="text-align:centre;">
+        <button class="button" onclick="populateActiveRecord()">Refresh Recipe ActiveRecord</button>
+    </div>
+
 </div>
+
+<script>
+    function populateActiveRecord() {
+        $.ajax({
+            type: "POST"
+            url: "/scripts/autoPopulateActiveRecords.py"
+        })
+    }
+</script>
 
 
 </body>

@@ -39,6 +39,7 @@ h1{
 .next-step-btn{
     width: 300px;
     margin: 0 auto;
+    margin-bottom:50px;
 }
 .next-step-btn a{
     display:block;
@@ -108,19 +109,7 @@ nav ul li a{
 nav ul li a:hover{
    color:white;
 }
-.route{
-   display:block;
-}
-.calculation{
-   border: black solid 1px;
-   margin: 5px;
-   min-height: 50px;
-}
-.total{
-   float:left;
-}
-.total p{
-   text-align: center;
+
 }
 .loader {
    margin: 0 auto;
@@ -148,4 +137,78 @@ nav ul li a:hover{
 }
 .active{
     color: white;
+}
+.calculation{
+   border: black solid 1px;
+   margin: 5px;
+   min-height: 50px;
+   border-radius: 3px;
+   display: flex;
+   background-color: #eee;
+   max-width: 900px;
+   margin: 0 auto;
+}
+.route-map{
+}
+.route{
+   min-width: 300px;
+   display: flex;
+   flex-flow: column wrap;
+}
+.total{
+   
+   margin:125px 40px 40px 40px;
+   
+}
+.route-info{
+   min-width: 300px;
+   border: 1px solid black;
+   padding: 10px;
+   margin: 15px;
+   border-radius: 3px;
+   background-color: #fff;
+}
+.total p{
+   background-color: #dc3545;
+   color: white;
+   margin: 0 auto;
+   text-align: center;
+   border: 1px solid black;
+   border-radius: 3px;
+   padding: 15px;
+}
+#route-map{
+   
+   border: 1px solid black;
+   margin: 20px;
+   max-width: 200px;
+   background-color: white;
+}
+.p-canvas{
+   margin: 0 auto;
+}
+.draw-canvas{
+   padding:5px;
+   margin: 0 auto;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+button.draw-canvas{
+   border-radius: 3px;
+   background-color: #dc3545;
+   color: white;
+   padding:10px;
+   cursor: pointer;
+   border: 1px solid black;
+}
+button.draw-canvas:hover{
+   background-color: red;
+}
+.store-key{
+   border: 1px solid black;
+   display: inline-block;
+   margin:0 auto;
+   height: 50px;
+   width: 200px;
+   background-color: #fff;
 }

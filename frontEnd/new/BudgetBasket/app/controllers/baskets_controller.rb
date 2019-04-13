@@ -18,7 +18,14 @@ class BasketsController < ApplicationController
         @basket = Basket.find(params[:id])
         @basket.destroy
         
-        redirect_to recipes_path
+        redirect_to baskets_path
+    end
+    
+    def switchOrganicState
+        @basket = Basket.find(params[:id])
+        @basket.ingredient_organic = !@basket.ingredient_organic
+        
+        redirect_to baskets_path
     end
 end
 

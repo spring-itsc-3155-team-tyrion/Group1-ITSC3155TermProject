@@ -34,6 +34,9 @@
                <td><%= basket.ingredient_name %></td>
                <td><%= basket.ingredient_count %></td>
                <td><input type="checkbox" name="select-organic" /></td>
+               <td>
+                   <%= link_to 'Switch to Organic', {:controller => "baskets", :action => "switchOrganicState", :basket => basket.id}, :class => 'btn btn-primary'%>
+               </td>
            </tr>
         <% end %>
     </table>

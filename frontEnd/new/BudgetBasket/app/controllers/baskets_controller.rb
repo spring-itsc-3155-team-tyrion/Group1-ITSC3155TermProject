@@ -1,5 +1,5 @@
 class BasketsController < ApplicationController
-    def allBaskets
+    def basket
         @baskets = Basket.all
     end
     
@@ -15,6 +15,9 @@ class BasketsController < ApplicationController
         @basket.destroy
         
         redirect_to baskets_path
+    end
+    
+    def calculation
     end
     
     def switchOrganicState

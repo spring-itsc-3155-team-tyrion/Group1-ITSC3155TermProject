@@ -20,13 +20,13 @@ class RecipesController < ApplicationController
     def addRecipeToBasket()
         system (Dir.pwd + '/scripts/addRecipeToBasket.py')
         
-        redirect_to recipe_path
+        redirect_to recipes_path
     end
     
     def deleteRecipeFromBasket()
         system (Dir.pwd + '/scripts/deleteRecipeFromBasket.py')
         
-        redirect_to recipe_path
+        redirect_to recipes_path
     end
 end
 

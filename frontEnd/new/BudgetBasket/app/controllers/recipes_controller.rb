@@ -21,8 +21,13 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find(params[:recipe])
         
         for ingredient in @recipe.recipe_ingredient_array do
-            #if ingredient in Basket ActiveRecord
-                #increment ingredient_count in Basket
+            puts "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+            puts ingredient
+            puts Basket.exists?(ingredient_name: ingredient)
+            if Basket.exists?(ingredient_name: ingredient)
+                @basket = Basket.find_by(ingredient_name: ingredient)
+                @basket.ingredient_count = @basket.ingredient_count + 1
+                @basket.save
             else
                 @basket = Basket.new(:ingredient_name => ingredient, :ingredient_count => 1, :ingredient_organic => false)
                 @basket.save

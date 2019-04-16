@@ -27,6 +27,12 @@ class BasketsController < ApplicationController
         
         redirect_to basket_path
     end
+    
+    def writeBasketActiveRecordToFile
+        File.open("../../../..", "w+") do |f|
+            f.write(puts "test")
+        end
+    end
 end
 
 private

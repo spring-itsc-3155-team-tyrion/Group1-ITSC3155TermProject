@@ -34,8 +34,12 @@
            <tr>
                <td><%= basket.ingredient_name %></td>
                <td><%= basket.ingredient_count %></td>
-               <td><%= basket.ingredient_organic %></td>
-               <td><%= link_to 'Switch Organic Status', {:controller => "baskets", :action => "switchOrganicState", :basket => basket.id}, :class => 'btn btn-primary'%></td>
+               <% if basket.ingredient_organic == true %>
+                   <td>Organic</td>
+               <% else %>
+                   <td>Non-Organic</td>
+               <% end %>
+               <td><%= link_to 'Switch Organic Status', {:controller => "baskets", :action => "switchOrganicState", :basket => basket.id}, :class => 'switchOrganic'%></td>
            </tr>
         <% end %>
     </table>

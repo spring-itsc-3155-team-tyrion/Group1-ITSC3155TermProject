@@ -28,7 +28,7 @@
         <tr>
             <th>Recipe Name</th>
             <th>Ingredients in Recipe</th>
-            <th>Recipe Action</th>
+            <th class="addDelete">Recipe Action</th>
         </tr>
         
         <% @recipes.each do |recipe| %>
@@ -36,8 +36,8 @@
                <td><%= recipe.recipe_name %></td>
                <td><%= recipe.recipe_ingredient_array %></td>
                <td>
-                   <%= link_to 'Add', {:controller => "recipes", :action => "addRecipeToBasket", :recipe => recipe.id}, :class => 'btn btn-primary'%>
-                   <%= link_to 'Delete', {:controller => "recipes", :action => "deleteRecipeFromBasket", :recipe => recipe.id}, :class => 'btn btn-primary'%>
+                   <%= link_to 'Add', {:controller => "recipes", :action => "addRecipeToBasket", :recipe => recipe.id}, :class => 'addBtn'%>
+                   <%= link_to 'Delete', {:controller => "recipes", :action => "deleteRecipeFromBasket", :recipe => recipe.id}, :class => 'deleteBtn'%>
                </td>
            </tr>
         <% end %>

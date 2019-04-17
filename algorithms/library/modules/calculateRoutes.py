@@ -4,44 +4,58 @@ import os
 import itertools
 import math
 
-def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList):
-    os.chdir(wd + '/../samples')
+def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList, travelCostPerUnit):
+    os.chdir(wd + '/library/data')
 
     ingredientDictionary = parseIngredientList(ingredientList) #{ingredient_name: ingredient_count}
     
     for routeType in routeTypes:
-        if routeType == "bestPrice": #absolute best price at store, does not take into account travel expenses, possible feature later on
-            information = getInformation_bestPrice(priceMatrix, ingredientDictionary)
+        print('--------->Calculating route type ' + routeType + '\n')
+        
+        if routeType == "bestPriceAtStore": #absolute best price at store, does not take into account travel expenses, possible feature later on
+            information = getInformation_bestPriceAtStore(priceMatrix, ingredientDictionary)
             storeWithBestPriceMatrix = information['storeWithBestPriceMatrix']
             completelyUnavailableIngredients = information['completelyUnavailableIngredients']
             substitutedIngredients = information['substitutedIngredients']
             
+            '''
             print('Total Number of Ingredients: ' + str(len(ingredientDictionary.keys())) + ' (Should be the number of completelyUnavailableIngredients + number of found original ingredients)\n')    
             print('Number of found original ingredients (storeWithBestPriceMatrix): ' + str(len(storeWithBestPriceMatrix.keys())))
+            print('##This matrix will only contain originally selected user ingredient names and substituted ingredient names that are opposite to the elements in the substitutedIngredients array')
             print(storeWithBestPriceMatrix)
             print('\n')
             print('Number of completelyUnavailableIngredients: ' + str(len(completelyUnavailableIngredients)))
+            print('##This array will only contain originally selected user ingredient names, where the ingredient was not found in any store in the organic or non-organic form')
             print(completelyUnavailableIngredients)
             print('\n')
             print('Number of substitutedIngredients: ' + str(len(substitutedIngredients)))
+            print('##This array will only contain originally selected user ingredient names, where the ingredient was not found in any store in the user selected form, but was found in the opposite form')
             print(substitutedIngredients)
+            print('\n')
+            '''
             
-            results = calculateRoute_bestPrice(coordinateMatrix, storeWithBestPriceMatrix)
+            results = calculateRoute_bestPriceAtStore(coordinateMatrix, storeWithBestPriceMatrix)
             shortestPermutation = results[0]
             shortestPermutationDistance = results[1]
+            totalTravelCost = float(shortestPermutationDistance) * float(travelCostPerUnit)
             
-            print(shortestPermutation)
-            print(shortestPermutationDistance)
+            totalCost = getTotalPrice_bestPriceAtStore(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary, totalTravelCost)
             
-        elif routeType == "leastNumStores":
-            getInformation_leastNumStores(priceMatrix, coordinateMatrix, ingredientDictionary)
-            calculateRoute_leastNumStores(priceMatrix, coordinateMatrix, ingredientDictionary)
+            print('Results:')
+            print('optimal route: ' + str(shortestPermutation))
+            print('route distance: ' + str(shortestPermutationDistance))
+            print('price of travel: ' + str(totalTravelCost))
+            print('price of ingredients: ' + str(totalCost-totalTravelCost))
+            print('total price: ' + str(totalCost))
+            
+            shoppingList = getShoppingList(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary)
         else:
             print("RouteType not programmed!")
             
+        print('\n--------->Done\n\n\n')
             
-def getInformation_bestPrice(priceMatrix, ingredientDictionary):
-    bestPrice = 10000000 #set to a very large number so first price found is always best price
+def getInformation_bestPriceAtStore(priceMatrix, ingredientDictionary):
+    bestPriceAtStore = 10000000 #set to a very large number so first price found is always best price
     completelyUnavailableIngredients = [] #elements in this list have both organic and non-organic versions unavailable in all stores
     substitutedIngredients = [] #elements in this list were originally unavailable, however their opposite ingredient (organic --> non-organic, non-organic --> organic) was available, then that new version was added to the storeWithBestPriceMatrix, so for example, if ingredient_137_organic is in the list, then ingredient_137_non-organic is the storeWithBestPriceMatrix, and ingredient_137_organic was what the user orginally requested
     storeWithBestPriceMatrix = {}
@@ -50,8 +64,8 @@ def getInformation_bestPrice(priceMatrix, ingredientDictionary):
         
         for store in priceMatrix: #checks all stores for originally selected ingredient
             if ingredient in priceMatrix[store].keys():
-                if float(priceMatrix[store][ingredient]) < bestPrice: #currently doesnt have any added functionality if two stores just so happen to have the same price, this might be added in the future
-                    bestPrice = priceMatrix[store][ingredient]
+                if float(priceMatrix[store][ingredient]) < bestPriceAtStore: #currently doesnt have any added functionality if two stores just so happen to have the same price, this might be added in the future
+                    bestPriceAtStore = priceMatrix[store][ingredient]
                     storeWithBestPriceMatrix[ingredient] = store
             else:
                 pass
@@ -65,8 +79,8 @@ def getInformation_bestPrice(priceMatrix, ingredientDictionary):
             
             for store in priceMatrix:    
                 if oppositeIngredient in priceMatrix[store].keys():
-                        if float(priceMatrix[store][oppositeIngredient]) < bestPrice:
-                            bestPrice = priceMatrix[store][oppositeIngredient]
+                        if float(priceMatrix[store][oppositeIngredient]) < bestPriceAtStore:
+                            bestPriceAtStore = priceMatrix[store][oppositeIngredient]
                             storeWithBestPriceMatrix[oppositeIngredient] = store
                         else:
                             pass
@@ -79,9 +93,7 @@ def getInformation_bestPrice(priceMatrix, ingredientDictionary):
     
     return({'storeWithBestPriceMatrix': storeWithBestPriceMatrix, 'completelyUnavailableIngredients': completelyUnavailableIngredients, 'substitutedIngredients': substitutedIngredients})
     
-
-#this looks at raw store prices, not the user quantity (AKA this metho assumes that the user selected one of every item in list)
-def calculateRoute_bestPrice(coordinateMatrix, storeWithBestPriceMatrix): #this method generates one defined root to be the shortest where in all actuality for every route, there is an identical, reverse route. It is arbitrary which is selected. So if there are n routes generated, there are n/2 unique routes.
+def calculateRoute_bestPriceAtStore(coordinateMatrix, storeWithBestPriceMatrix): #this method generates one defined root to be the shortest where in all actuality for every route, there is an identical, reverse route. It is arbitrary which is selected. So if there are n routes generated, there are n/2 unique routes.
     stores = []
     for key in storeWithBestPriceMatrix:
         if storeWithBestPriceMatrix[key] in stores:
@@ -117,16 +129,60 @@ def calculateRoute_bestPrice(coordinateMatrix, storeWithBestPriceMatrix): #this 
     
     return(distanceDict[shortestPermutationNum])
 
+def getTotalPrice_bestPriceAtStore(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary, totalTravelCost):
+    #this operation removes the _non-organic and _organic tags from ingredients in the ingredientDictionary
+    stripped_countDictionary = {}
+    for ingredient in ingredientDictionary:
+        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        stripped_countDictionary[temp] = ingredientDictionary[ingredient]
+    
+    #this operation removes the _non-organic and _organic tags from ingredients in the storeWithBestPriceMatrix
+    stripped_storeDictionary = {}
+    for ingredient in storeWithBestPriceMatrix:
+        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        stripped_storeDictionary[temp] = storeWithBestPriceMatrix[ingredient]
+    
+    totalIngredientCost = 0.0
+    for ingredient in storeWithBestPriceMatrix:
+        ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        totalIngredientCost += float(stripped_countDictionary[ingredient_stripped]) * float(priceMatrix[stripped_storeDictionary[ingredient_stripped]][ingredient])
+    
+    return(totalIngredientCost + totalTravelCost)
+
+def getShoppingList(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary):
+    #this operation removes the _non-organic and _organic tags from ingredients in the ingredientDictionary
+    stripped_countDictionary = {}
+    for ingredient in ingredientDictionary:
+        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        stripped_countDictionary[temp] = ingredientDictionary[ingredient]
+    
+    #this operation removes the _non-organic and _organic tags from ingredients in the storeWithBestPriceMatrix
+    stripped_storeDictionary = {}
+    for ingredient in storeWithBestPriceMatrix:
+        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        stripped_storeDictionary[temp] = storeWithBestPriceMatrix[ingredient]
+    
+    shoppingDictionary = {}
+    for ingredient in storeWithBestPriceMatrix:
+        ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        ingredient_count = stripped_countDictionary[ingredient_stripped]
+        ingredient_store = stripped_storeDictionary[ingredient_stripped]
+        
+        if ingredient_store not in shoppingDictionary.keys():
+            shoppingDictionary[ingredient_store] = []
+            
+        shoppingDictionary[ingredient_store].append(ingredient)
+        
+        #print(ingredient_stripped)
+        #print(ingredient_count)
+        #print(ingredient_store)
+        
+    print(shoppingDictionary)
+
 def getDistance(pointA, pointB):
     distance = math.sqrt((float(pointB[0]) + float(pointA[0]))**2 + (float(pointB[1]) + float(pointA[1]))**2)
     
     return(distance)
-    
-def getInformation_leastNumStores(priceMatrix, coordinateMatrix, ingredientDictionary):
-    print('')
-    
-def calculateRoute_leastNumStores(priceMatrix, coordinateMatrix, ingredientDictionary):
-    print('')
     
 def parseIngredientList(ingredientList):
     with open(ingredientList, 'r') as chunk:

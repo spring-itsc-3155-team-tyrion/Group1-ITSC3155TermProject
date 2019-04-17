@@ -6,8 +6,8 @@ from subprocess import Popen, PIPE, check_output
 def __main__():
 	wd = os.path.dirname(os.path.abspath( __file__ ))
 
-	recipeDictionary = parseFile(wd + "/../../../../databases/library/data/recipes.list")
-	ingredientDictionary = parseFile(wd + "/../../../../databases/library/data/availableIngredientList.list")
+	recipeDictionary = parseFile(wd + "/../../../databases/library/data/recipes.list")
+	ingredientDictionary = parseFile(wd + "/../../../databases/library/data/availableIngredientList.list")
 
 	os.chdir(wd + '/../')
 	print(os.getcwd())

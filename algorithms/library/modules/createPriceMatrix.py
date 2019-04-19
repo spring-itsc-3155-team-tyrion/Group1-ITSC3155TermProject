@@ -4,7 +4,7 @@ import os
 import re
 
 def __main__(wd, ingredientList):
-	os.chdir(wd + '/../samples')
+	os.chdir(wd + '/library/data')
 
 	ingredientDictionary = parseIngredientList(ingredientList) #{ingredient_name: ingredient_count}
 

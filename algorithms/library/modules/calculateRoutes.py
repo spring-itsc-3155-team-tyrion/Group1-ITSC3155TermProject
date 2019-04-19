@@ -3,10 +3,13 @@
 import os
 import itertools
 import math
+import json
 
 def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList, travelCostPerUnit):
     os.chdir(wd + '/library/data')
-
+    
+    if 'data.json' in os.listdir(wd + '/../frontEnd/BudgetBasket/app/assets'): os.remove(wd + '/../frontEnd/BudgetBasket/app/assets/data.json')
+    
     ingredientDictionary = parseIngredientList(ingredientList) #{ingredient_name: ingredient_count}
     
     for routeType in routeTypes:
@@ -49,6 +52,25 @@ def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList, trav
             print('total price: ' + str(totalCost))
             
             shoppingList = getShoppingList(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary)
+            
+            outputDictionary = {}
+            outputDictionary['route_order'] = shortestPermutation
+            outputDictionary['route_distance'] = shortestPermutationDistance
+            outputDictionary['price_route'] = totalTravelCost
+            outputDictionary['price_ingredients'] = totalCost-totalTravelCost
+            outputDictionary['price_total'] = totalCost
+            outputDictionary['shopping_list'] = shoppingList
+            outputDictionary['coordinate_matrix'] = {}
+            
+            for location in coordinateMatrix:
+                x = coordinateMatrix[location][0]
+                y = coordinateMatrix[location][1]
+                outputDictionary['coordinate_matrix'][location] = {'x': x, 'y': y}
+            
+            with open(wd + '/../frontEnd/BudgetBasket/app/assets/data.json', 'w') as file:
+                file.write('data = ')
+                json.dump(outputDictionary, file, indent=4, sort_keys=True)
+                
         else:
             print("RouteType not programmed!")
             
@@ -168,16 +190,12 @@ def getShoppingList(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary)
         ingredient_count = stripped_countDictionary[ingredient_stripped]
         ingredient_store = stripped_storeDictionary[ingredient_stripped]
         
-        if ingredient_store not in shoppingDictionary.keys():
-            shoppingDictionary[ingredient_store] = []
-            
-        shoppingDictionary[ingredient_store].append(ingredient)
+        #if ingredient_store not in shoppingDictionary.keys(): shoppingDictionary[ingredient_store] = []
+        #shoppingDictionary[ingredient_store].append({'ingredient_name': ingredient, 'ingredient_count': ingredient_count})
         
-        #print(ingredient_stripped)
-        #print(ingredient_count)
-        #print(ingredient_store)
+        shoppingDictionary[ingredient] = {'ingredient_count': ingredient_count, 'ingredient_store': ingredient_store}
         
-    print(shoppingDictionary)
+    return(shoppingDictionary)
 
 def getDistance(pointA, pointB):
     distance = math.sqrt((float(pointB[0]) + float(pointA[0]))**2 + (float(pointB[1]) + float(pointA[1]))**2)

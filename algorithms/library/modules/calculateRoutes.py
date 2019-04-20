@@ -67,8 +67,8 @@ def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList, trav
                 y = coordinateMatrix[location][1]
                 outputDictionary['coordinate_matrix'][location] = {'x': x, 'y': y}
             
-            with open(wd + '/../frontEnd/BudgetBasket/app/assets/data.json', 'w') as file:
-                file.write('data = ')
+            with open(wd + '/../frontEnd/BudgetBasket/public/data.json', 'w') as file:
+                #file.write('data = ')
                 json.dump(outputDictionary, file, indent=4, sort_keys=True)
                 
         else:

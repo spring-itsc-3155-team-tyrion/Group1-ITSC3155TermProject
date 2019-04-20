@@ -1,11 +1,10 @@
 #ingredient_name	ingredient_count	ingredient_tag
-<<<<<<< HEAD
-ingredient_030	22	non-organic
-ingredient_039	20	organic
-ingredient_126	20	non-organic
-ingredient_082	20	non-organic
-ingredient_048	20	non-organic
-ingredient_161	20	non-organic
+ingredient_030	24	non-organic
+ingredient_039	22	organic
+ingredient_126	22	non-organic
+ingredient_082	22	non-organic
+ingredient_048	22	non-organic
+ingredient_161	22	non-organic
 ingredient_061	1	non-organic
 ingredient_063	1	non-organic
 ingredient_133	1	non-organic
@@ -18,6 +17,3 @@ ingredient_084	2	non-organic
 ingredient_025	2	non-organic
 ingredient_169	2	non-organic
 ingredient_171	2	non-organic
-=======
-ingredient_128	1	non-organic
->>>>>>> 6e7dd348dcf0ab9695cda54d292ec5459b5878db

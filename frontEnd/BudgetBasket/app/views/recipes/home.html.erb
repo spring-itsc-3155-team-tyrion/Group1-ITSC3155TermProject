@@ -63,31 +63,10 @@
     <div class="next-step-btn">
             <%= link_to "Check Out Our Recipes", allRecipes_path, class: "button" %>
     </div>
-    <!--
-    <div style="text-align:centre;">
-        <button class="button" onclick="populateActiveRecord()">Refresh Recipe ActiveRecord</button>
-    </div>
-    -->
-    <%= link_to 'Press me', button_path, :class => 'btn btn-primary'%>
+
+    <%# link_to 'Press me', button_path, :class => 'btn btn-primary'%>
 
 </div>
-
-<!--
-<script>
-    function populateActiveRecord() {
-        $.ajax({
-            type: "POST",
-            url: "../../../test.py",
-            data: {},
-            success: callBack
-        })
-    }
-    function callBack(response) {
-        alert("working");
-        console.log(response);
-    }
-</script>
--->
 
 </body>
 </html>

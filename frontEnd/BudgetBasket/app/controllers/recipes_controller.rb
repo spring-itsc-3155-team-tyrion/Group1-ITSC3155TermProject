@@ -17,6 +17,15 @@ class RecipesController < ApplicationController
         redirect_to allRecipes_path
     end
     
+    def resetRecipeCounts
+        @baskets = Basket.all
+        @baskets.each do |recipe|
+            recipe.destroy
+        end
+        
+        redirect_to allRecipes_path
+    end
+    
     def addRecipeToBasket
         @recipe = Recipe.find(params[:recipe])
         

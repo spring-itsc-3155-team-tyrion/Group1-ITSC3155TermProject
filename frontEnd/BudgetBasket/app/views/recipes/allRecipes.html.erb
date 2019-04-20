@@ -23,6 +23,10 @@
         </ul>
     </nav>
 <h1>Available Recipes</h1>
+<br/>
+<div class="delete-basket-btn">
+    <%= link_to 'Empty Basket', {:controller => "recipes", :action => "resetRecipeCounts"}, :class => 'button'%>
+</div>
 <div id="recipes-table">
     <table>
         <tr>
@@ -34,7 +38,7 @@
         <% @recipes.each do |recipe| %>
            <tr>
                <td><%= recipe.recipe_name %></td>
-               <td><%= recipe.recipe_ingredient_array %></td>
+               <td style="text-align:left"><%= recipe.recipe_ingredient_array %></td>
                <td>
                    <%= link_to 'Add', {:controller => "recipes", :action => "addRecipeToBasket", :recipe => recipe.id}, :class => 'addBtn'%>
                    <%= link_to 'Delete', {:controller => "recipes", :action => "deleteRecipeFromBasket", :recipe => recipe.id}, :class => 'deleteBtn'%>
@@ -44,7 +48,6 @@
         
     </table>
 </div>
-<br/>
 <div class="next-step-btn">
         <%= link_to "Add Recipe(s) to Basket", basket_path, class: "button" %>
     </div>

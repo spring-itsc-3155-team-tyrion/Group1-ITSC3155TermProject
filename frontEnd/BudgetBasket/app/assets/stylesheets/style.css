@@ -36,6 +36,26 @@ h1{
    margin: 0 auto;
    
 }
+.delete-basket-btn{
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.delete-basket-btn a{
+    display: block;
+    padding: 5px !important;
+    border-radius: 5px;
+    color: white;
+    background-color: #dc3545;
+    font-size: 18px !important;
+    margin:0 auto;
+    text-align:center;
+    text-decoration: none;
+}
+.delete-basket-btn a:hover{
+    background-color: #ff0000;
+    cursor:pointer;
+}
 .next-step-btn{
     width: 300px;
     margin: 0 auto;
@@ -62,15 +82,35 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-
 td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
+  border: 1px solid grey;
 }
-
+#th:nth-child(2) {
+    padding-left: 25px;
+}
+th:first-child {
+    border-right: 1px solid grey;
+}
+th:last-child {
+    border-left: 1px solid grey;
+}
+#td:nth-child(2) {
+    text-align: left;
+}
+td:first-child {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+td:last-child {
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+}
 tr:nth-child(even) {
   background-color: #dddddd;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 #recipes-table{
     margin: 0px 100px 0px 100px;
@@ -220,9 +260,23 @@ a.addBtn{
     border-radius: 3px;
     background-color: #4169e1;
     color: white;
+    width: 40%;
+    text-align: center;
 }
-a.deleteBtn {
+a.deleteBtn{
     border: 1px solid maroon;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #dc3545;
+    color: white;
+    width: 40%;
+    text-align: center;
+}
+a.resetBtn{
+    text-align: center;
+    width:8%;
     padding: 5px;
     text-decoration: none;
     display: inline-block;
@@ -234,6 +288,9 @@ a.addBtn:hover{
     background-color: #1e90ff;
 }
 a.deleteBtn:hover{
+    background-color: red;
+}
+a.resetBtn:hover{
     background-color: red;
 }
 .addDelete{

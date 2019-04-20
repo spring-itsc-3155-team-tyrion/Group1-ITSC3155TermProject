@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     get 'addRecipeToBasket' => 'recipes#addRecipeToBasket'
     get 'deleteRecipeFromBasket' => 'recipes#deleteRecipeFromBasket'
     get 'switchOrganicState' => 'baskets#switchOrganicState'
+    get 'resetRecipeCounts' => 'recipes#resetRecipeCounts'
+    get 'resetBasket' => 'baskets#resetBasket'
     
     root 'recipes#home'
 end

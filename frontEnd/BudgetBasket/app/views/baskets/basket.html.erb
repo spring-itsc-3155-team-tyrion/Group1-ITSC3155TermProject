@@ -21,7 +21,10 @@
         </ul>
     </nav>
 <h1>My Basket</h1>
-
+<br/>
+<div class="delete-basket-btn">
+    <%= link_to 'Empty Basket', {:controller => "baskets", :action => "resetBasket"}, :class => 'button'%>
+</div>
 <div id="basket-table">
     <table>
         <tr>

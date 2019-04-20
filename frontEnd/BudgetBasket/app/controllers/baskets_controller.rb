@@ -36,6 +36,15 @@ class BasketsController < ApplicationController
         system (Dir.pwd + '/../../algorithms/main.py')
     end
     
+    def resetBasket
+        @baskets = Basket.all
+        @baskets.each do |recipe|
+            recipe.destroy
+        end
+        
+        redirect_to basket_path
+    end
+    
     def switchOrganicState
         @basket = Basket.find(params[:basket])
         @basket.ingredient_organic = !@basket.ingredient_organic

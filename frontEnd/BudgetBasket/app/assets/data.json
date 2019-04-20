@@ -21,37 +21,86 @@ data = {
             "y": "83"
         }
     }, 
-    "price_ingredients": 18.297, 
-    "price_route": 3.1656051200024993, 
-    "price_total": 21.4626051200025, 
-    "route_distance": 316.5605120002499, 
+    "price_ingredients": 465.69800000000004, 
+    "price_route": 4.251302093484402, 
+    "price_total": 469.94930209348445, 
+    "route_distance": 425.1302093484402, 
     "route_order": [
         "origin", 
-        "store_1", 
-        "store_2", 
         "store_0", 
+        "store_2", 
+        "store_3", 
+        "store_1", 
         "origin"
     ], 
     "shopping_list": {
+        "ingredient_003_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_025_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_038_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
         "ingredient_039_non-organic": {
-            "ingredient_count": "1", 
+            "ingredient_count": "20", 
             "ingredient_store": "store_2"
         }, 
         "ingredient_048_non-organic": {
+            "ingredient_count": "20", 
+            "ingredient_store": "store_0"
+        }, 
+        "ingredient_061_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_0"
         }, 
+        "ingredient_063_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_067_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
         "ingredient_082_non-organic": {
+            "ingredient_count": "20", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_084_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_117_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_124_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
         "ingredient_126_non-organic": {
-            "ingredient_count": "1", 
+            "ingredient_count": "20", 
             "ingredient_store": "store_1"
         }, 
-        "ingredient_161_non-organic": {
+        "ingredient_133_non-organic": {
             "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_161_non-organic": {
+            "ingredient_count": "20", 
             "ingredient_store": "store_2"
+        }, 
+        "ingredient_169_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_171_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_0"
         }
     }
 }

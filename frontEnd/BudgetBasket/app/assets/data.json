@@ -21,6 +21,7 @@ data = {
             "y": "83"
         }
     }, 
+<<<<<<< HEAD
     "price_ingredients": 465.69800000000004, 
     "price_route": 4.251302093484402, 
     "price_total": 469.94930209348445, 
@@ -87,6 +88,19 @@ data = {
             "ingredient_store": "store_1"
         }, 
         "ingredient_133_non-organic": {
+=======
+    "price_ingredients": 4.833, 
+    "price_route": 1.2041594578792296, 
+    "price_total": 6.03715945787923, 
+    "route_distance": 120.41594578792295, 
+    "route_order": [
+        "origin", 
+        "store_2", 
+        "origin"
+    ], 
+    "shopping_list": {
+        "ingredient_128_non-organic": {
+>>>>>>> 6e7dd348dcf0ab9695cda54d292ec5459b5878db
             "ingredient_count": "1", 
             "ingredient_store": "store_3"
         }, 

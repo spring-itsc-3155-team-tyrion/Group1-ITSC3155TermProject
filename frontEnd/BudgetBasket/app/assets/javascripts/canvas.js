@@ -13,11 +13,17 @@ function drawCanvas(json){
     
     // Translate coordinates to canvas coordinates
     for(var i = 0; i<points.length; i++){
-        console.log("hello");
+        
         var x = coordinates[points[i]].x; 
         var y = coordinates[points[i]].y;
-        x = (x+100)* 1.5;
-        y = (y+100)* 1.5;
+        console.log("X: " + x + ",Y: " + y);
+        x = parseInt(x);
+        y = parseInt(y);
+        
+        x = (x+100) * 1.5;
+        y = (y+100) * 1.5;
+        
+        console.log("New X: " + x + ",New Y: " + y);
         coordinates[points[i]].x = x;
         coordinates[points[i]].y = y;
         console.log(coordinates[points[i]]);

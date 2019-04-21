@@ -9,11 +9,7 @@
 </head>
 
 <body>
-    <script>
-        loadJSON(function(json) {
-            console.log(json);
-        });
-    </script>
+    
     <nav id="main-nav">
         <ul>
             <li id="nav-logo">
@@ -34,11 +30,7 @@
                 <p class="p-canvas">
                 <canvas id="route-map" height= "200px" width="200px"></canvas>
                 </p>
-                <div class="store-key">
                 
-                </div>
-                
-                <button type="button" class="draw-canvas" onclick="drawCanvas()">Draw Canvas</button>
                 
             </div>
             
@@ -49,10 +41,14 @@
             </div>
             
             <div class="total">
-                <p>Total: $123.45</p>
+                <p>Total: $</p>
             </div>
         </div>
     </div>
-    
+    <script>
+        loadJSON(function(json) {
+            sendJson(json);
+        });
+    </script>
 </body>
 </html>

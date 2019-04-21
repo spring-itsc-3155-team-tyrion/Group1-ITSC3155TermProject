@@ -22,14 +22,40 @@
             "y": "83"
         }
     }, 
-    "price_ingredients": 0.0, 
-    "price_route": 0.0, 
-    "price_total": 0.0, 
-    "route_distance": 0.0, 
+    "price_ingredients": 23.932, 
+    "price_route": 2.5114309301110693, 
+    "price_total": 26.443430930111067, 
+    "route_distance": 251.14309301110694, 
     "route_order": [
         "origin", 
+        "store_3", 
+        "store_2", 
+        "store_0", 
         "origin"
     ], 
-    "shopping_list": {}, 
-    "substituted_ingredients": []
+    "shopping_list": {
+        "ingredient_061_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_0"
+        }, 
+        "ingredient_063_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_117_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_124_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_133_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }
+    }, 
+    "substituted_ingredients": [
+        "ingredient_063_organic"
+    ]
 }

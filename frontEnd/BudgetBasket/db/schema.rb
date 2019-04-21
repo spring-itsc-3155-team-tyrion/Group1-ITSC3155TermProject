@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_10_200958) do
+ActiveRecord::Schema.define(version: 2019_04_21_210153) do
 
   create_table "baskets", force: :cascade do |t|
     t.string "ingredient_name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2019_04_10_200958) do
     t.text "recipe_ingredient_array"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "recipe_count_in_basket"
   end
 
 end

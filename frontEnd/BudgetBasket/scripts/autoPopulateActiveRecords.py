@@ -42,7 +42,7 @@ def recordRecipes(dictionary):
 		print('Writing ' + str(recipe) + ' to active record Recipe')
 		recipeName = recipe
 		recipeIngredientArray = dictionary[recipe]
-		arg = 'recipe=Recipe.create!(:recipe_name=>"' + recipeName + '",:recipe_ingredient_array=>' + str(recipeIngredientArray) + ')'
+		arg = 'recipe=Recipe.create!(:recipe_name=>"' + recipeName + '",:recipe_ingredient_array=>' + str(recipeIngredientArray) + ',:recipe_count_in_basket=>' + str(0) + ')'
 		p1 = Popen(['echo', arg], stdout=PIPE)
 		p2 = Popen(['spring', 'rails', 'console'], stdin=p1.stdout, stdout=PIPE, stderr=open(os.devnull, 'w'))
 		p1.stdout.close()
@@ -53,7 +53,7 @@ def recordIngredients(dictionary):
 		print('Writing ' + str(ingredient) + ' to active record Recipe')
 		recipeName = ingredient
 		recipeIngredientArray = [str(ingredient)]
-		arg = 'recipe=Recipe.create!(:recipe_name=>"' + recipeName + '",:recipe_ingredient_array=>' + str(recipeIngredientArray) + ')'
+		arg = 'recipe=Recipe.create!(:recipe_name=>"' + recipeName + '",:recipe_ingredient_array=>' + str(recipeIngredientArray) + ',:recipe_count_in_basket=>' + str(0) + ')'
                 p1 = Popen(['echo', arg], stdout=PIPE)
                 p2 = Popen(['spring', 'rails', 'console'], stdin=p1.stdout, stdout=PIPE, stderr=open(os.devnull, 'w'))
                 p1.stdout.close()

@@ -38,8 +38,14 @@ class BasketsController < ApplicationController
     
     def resetBasket
         @baskets = Basket.all
-        @baskets.each do |recipe|
-            recipe.destroy
+        @baskets.each do |ingredient|
+            ingredient.destroy
+        end
+        
+        @recipes = Recipe.all
+        @recipes.each do |recipe|
+            recipe.recipe_count_in_basket = 0
+            recipe.save
         end
         
         redirect_to basket_path

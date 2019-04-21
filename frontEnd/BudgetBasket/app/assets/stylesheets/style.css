@@ -253,25 +253,25 @@ button.draw-canvas:hover{
    background-color: #fff;
 }
 a.addBtn{
-    border: 1px solid maroon;
+    border: 1px solid black;
     padding: 5px;
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
     background-color: #4169e1;
     color: white;
-    width: 40%;
+    width: 20%;
     text-align: center;
 }
 a.deleteBtn{
-    border: 1px solid maroon;
+    border: 1px solid black;
     padding: 5px;
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
     background-color: #dc3545;
     color: white;
-    width: 40%;
+    width: 20%;
     text-align: center;
 }
 a.resetBtn{
@@ -285,7 +285,7 @@ a.resetBtn{
     color: white;
 }
 a.addBtn:hover{
-    background-color: #1e90ff;
+    background-color: #0c84f9;
 }
 a.deleteBtn:hover{
     background-color: red;
@@ -294,7 +294,7 @@ a.resetBtn:hover{
     background-color: red;
 }
 .addDelete{
-    min-width:110px;
+    min-width:100px;
 }
 a.switchOrganic{
     border: 1px solid maroon;
@@ -307,4 +307,15 @@ a.switchOrganic{
 }
 a.switchOrganic:hover{
     background-color: #1e90ff;
+}
+.count{
+    border: 1px solid black;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    width: 20%;
+    text-align: center;
 }

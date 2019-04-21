@@ -61,6 +61,8 @@ def __main__(wd, priceMatrix, coordinateMatrix, routeTypes, ingredientList, trav
             outputDictionary['price_total'] = totalCost
             outputDictionary['shopping_list'] = shoppingList
             outputDictionary['coordinate_matrix'] = {}
+            outputDictionary['completely_unavailable_ingredients'] = completelyUnavailableIngredients
+            outputDictionary['substituted_ingredients'] = substitutedIngredients
             
             for location in coordinateMatrix:
                 x = coordinateMatrix[location][0]

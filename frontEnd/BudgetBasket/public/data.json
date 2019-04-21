@@ -1,4 +1,7 @@
 {
+    "completely_unavailable_ingredients": [
+        "ingredient_030_organic"
+    ], 
     "coordinate_matrix": {
         "origin": {
             "x": "0", 
@@ -53,5 +56,8 @@
             "ingredient_count": "3", 
             "ingredient_store": "store_2"
         }
-    }
+    }, 
+    "substituted_ingredients": [
+        "ingredient_048_organic"
+    ]
 }

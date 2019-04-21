@@ -1,6 +1,7 @@
 {
     "completely_unavailable_ingredients": [
-        "ingredient_030_organic"
+        "ingredient_069_non-organic", 
+        "ingredient_030_non-organic"
     ], 
     "coordinate_matrix": {
         "origin": {
@@ -24,18 +25,31 @@
             "y": "83"
         }
     }, 
-    "price_ingredients": 57.178799999999995, 
-    "price_route": 3.1656051200024993, 
-    "price_total": 60.34440512000249, 
-    "route_distance": 316.5605120002499, 
+    "price_ingredients": 134.279, 
+    "price_route": 4.251302093484402, 
+    "price_total": 138.5303020934844, 
+    "route_distance": 425.1302093484402, 
     "route_order": [
         "origin", 
-        "store_1", 
-        "store_2", 
         "store_0", 
+        "store_2", 
+        "store_3", 
+        "store_1", 
         "origin"
     ], 
     "shopping_list": {
+        "ingredient_003_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_025_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_038_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
         "ingredient_039_non-organic": {
             "ingredient_count": "3", 
             "ingredient_store": "store_2"
@@ -44,20 +58,78 @@
             "ingredient_count": "3", 
             "ingredient_store": "store_0"
         }, 
+        "ingredient_061_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_0"
+        }, 
+        "ingredient_063_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_067_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
         "ingredient_082_non-organic": {
             "ingredient_count": "3", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_126_organic": {
+        "ingredient_084_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_085_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_086_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_100_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_107_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_1"
+        }, 
+        "ingredient_117_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_124_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_125_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_126_non-organic": {
             "ingredient_count": "3", 
             "ingredient_store": "store_1"
         }, 
-        "ingredient_161_organic": {
+        "ingredient_133_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_161_non-organic": {
             "ingredient_count": "3", 
             "ingredient_store": "store_2"
+        }, 
+        "ingredient_165_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_169_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_171_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_0"
         }
     }, 
-    "substituted_ingredients": [
-        "ingredient_048_organic"
-    ]
+    "substituted_ingredients": []
 }

@@ -34,6 +34,7 @@ class BasketsController < ApplicationController
         end
         
         system (Dir.pwd + '/../../algorithms/main.py')
+        sleep(3)
     end
     
     def resetBasket

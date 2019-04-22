@@ -1,11 +1,5 @@
 {
-<<<<<<< HEAD
-    "completely_unavailable_ingredients": [
-        "ingredient_043_non-organic"
-    ], 
-=======
     "completely_unavailable_ingredients": [], 
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
     "coordinate_matrix": {
         "origin": {
             "x": "0", 
@@ -32,55 +26,26 @@
             "y": "49"
         }
     }, 
-<<<<<<< HEAD
-    "price_ingredients": 87.838, 
-    "price_route": 3.849409535008206, 
-    "price_total": 91.6874095350082, 
-=======
-    "price_ingredients": 135.3995, 
-    "price_route": 3.849409535008206, 
-    "price_total": 139.24890953500818, 
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
-    "route_distance": 384.94095350082057, 
+    "price_ingredients": 60.87569999999999, 
+    "price_route": 3.2209264725347335, 
+    "price_total": 64.09662647253472, 
+    "route_distance": 322.09264725347333, 
     "route_order": [
         "origin", 
+        "store_0", 
         "store_2", 
         "store_3", 
-        "store_1", 
-        "store_0", 
-        "store_4", 
         "origin"
     ], 
     "shopping_list": {
-        "barbeque_sauce_non-organic": {
+        "ingredient_010_organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-<<<<<<< HEAD
-        "brown_sugar_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "chicken_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_001_non-organic": {
-=======
-        "ingredient_028_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_030_organic": {
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_3"
         }, 
         "ingredient_025_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-<<<<<<< HEAD
         "ingredient_040_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
@@ -89,99 +54,34 @@
             "ingredient_count": "1", 
             "ingredient_store": "store_0"
         }, 
-        "ingredient_047_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_064_non-organic": {
-            "ingredient_count": "1", 
-=======
-        "ingredient_065_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_069_non-organic": {
-            "ingredient_count": "3", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_082_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_085_non-organic": {
-            "ingredient_count": "2", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_086_non-organic": {
-            "ingredient_count": "2", 
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_068_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-<<<<<<< HEAD
-        "ingredient_109_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_124_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_1"
-        }, 
-        "ingredient_143_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_4"
-        }, 
-        "ingredient_145_non-organic": {
+        "ingredient_051_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_0"
         }, 
-        "ingredient_154_non-organic": {
-=======
-        "ingredient_107_non-organic": {
-            "ingredient_count": "2", 
-            "ingredient_store": "store_1"
-        }, 
-        "ingredient_111_non-organic": {
+        "ingredient_064_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_3"
         }, 
-        "ingredient_126_organic": {
+        "ingredient_106_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_138_non-organic": {
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
+        "ingredient_112_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_0"
         }, 
-        "italian_dressing_non-organic": {
+        "ingredient_122_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_0"
         }, 
-<<<<<<< HEAD
-        "worcestershire_non-organic": {
-=======
-        "ingredient_165_non-organic": {
-            "ingredient_count": "2", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_175_non-organic": {
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
+        "ingredient_148_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_0"
+        }, 
+        "ingredient_177_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
         }
     }, 
-<<<<<<< HEAD
     "substituted_ingredients": []
-=======
-    "substituted_ingredients": [
-        "ingredient_138_organic", 
-        "ingredient_086_organic", 
-        "ingredient_165_organic", 
-        "ingredient_082_organic"
-    ]
->>>>>>> f01bce8cc5923f29e8f8868f71e20f25dec85848
 }

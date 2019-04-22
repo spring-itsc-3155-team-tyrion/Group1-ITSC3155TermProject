@@ -23,7 +23,7 @@
             <li><%= link_to "My Shopping Plan", calculation_path, class:"active"%></li>
         </ul>
     </nav>
-    <h1>Basket Calculations</h1>
+    <h1>Shopping Plan</h1>
     <div id="calculation-content">
         <div class="calculation">
             <div class="route">
@@ -33,16 +33,33 @@
                 
                 
             </div>
-            
-            
-            <div class="route-info">
-                <h2>Route #1</h2>
-                <p>These items were not found</p>
+            <div did="calculation-info">
+                <div class="data" id="shopping-list">
+                    <span class="title">Shopping List: </span>
+                    <span class="value"></span>
+                </div>
+                <div class="data" id="sub-items">
+                    <span class="title">Substituted Items: </span>
+                    <span class="value"></span>
+                </div>
+                <div class="data" id="na-items">
+                    <span class="title">Not Available Items: </span>
+                    <span class="value"></span>
+                </div>
+                <div class="data" id="ingredient-cost">
+                    <span class="title">Ingredient Cost: $</span>
+                    <span class="value"></span>
+                </div>
+                <div class="data" id="route-cost">
+                    <span class="title">Gas Cost: $</span>
+                    <span class="value"></span>
+                </div>
+                <div class="data" id="total-cost">
+                    <span class="title">Total: $</span>
+                    <span class="value"></span>
+                </div>
             </div>
             
-            <div class="total">
-                <p>Total: $</p>
-            </div>
         </div>
     </div>
     <script>

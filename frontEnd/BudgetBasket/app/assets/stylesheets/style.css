@@ -95,6 +95,7 @@ th:first-child {
 }
 th:last-child {
     border-left: 1px solid grey;
+    min-width: 150px;
 }
 #td:nth-child(2) {
     text-align: left;
@@ -113,10 +114,10 @@ tr:nth-child(even) {
   border-bottom: 1px solid black;
 }
 #recipes-table{
-    margin: 0px 100px 0px 100px;
+    margin: 0px 150px 0px 150px;
 }
 #basket-table{
-    margin: 0px 100px 0px 100px;
+    margin: 0px 150px 0px 150px;
 }
 #calculation-content{
    margin: 0px 100px 0px 100px;
@@ -188,26 +189,14 @@ nav ul li a:hover{
    max-width: 900px;
    margin: 0 auto;
 }
-.route-map{
-}
+
 .route{
-   min-width: 300px;
+   min-width: 350px;
    display: flex;
    flex-flow: column wrap;
 }
-.total{
-   
-   margin:125px 40px 40px 40px;
-   
-}
-.route-info{
-   min-width: 300px;
-   border: 1px solid black;
-   padding: 10px;
-   margin: 15px;
-   border-radius: 3px;
-   background-color: #fff;
-}
+
+
 .total p{
    background-color: #dc3545;
    color: white;

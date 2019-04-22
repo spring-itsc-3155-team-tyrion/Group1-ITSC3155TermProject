@@ -68,8 +68,6 @@ function displayData(json){
         var colorSwatch = clone.find(".color-swatch");
         colorSwatch.css("background-color", colors[(i-1)]);
         
-        
-        
         var valueList = clone.find(".value-list");
         // Get all ingredients
         var shoppingList = json.shopping_list;

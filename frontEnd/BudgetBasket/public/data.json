@@ -25,9 +25,9 @@
             "y": "83"
         }
     }, 
-    "price_ingredients": 111.582, 
+    "price_ingredients": 120.68299999999999, 
     "price_route": 4.251302093484402, 
-    "price_total": 115.83330209348439, 
+    "price_total": 124.93430209348439, 
     "route_distance": 425.1302093484402, 
     "route_order": [
         "origin", 
@@ -41,6 +41,10 @@
         "ingredient_019_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
+        }, 
+        "ingredient_023_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
         }, 
         "ingredient_028_non-organic": {
             "ingredient_count": "1", 
@@ -121,6 +125,7 @@
     }, 
     "substituted_ingredients": [
         "ingredient_138_organic", 
+        "ingredient_133_organic", 
         "ingredient_166_organic"
     ]
 }

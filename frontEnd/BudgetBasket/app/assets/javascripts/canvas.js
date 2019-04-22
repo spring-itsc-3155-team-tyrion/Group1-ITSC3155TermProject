@@ -13,6 +13,7 @@ function drawCanvas(json){
     // Get coordinates
     coordinates = json.coordinate_matrix;
     points = Object.keys(coordinates); // list of keys for the coordinate points
+    drawLabels();
     
     // Translate coordinates to canvas coordinates
     for(var i = 0; i<points.length; i++){
@@ -115,10 +116,21 @@ function drawPoint(coordinate){
     context.beginPath();
     context.moveTo(coordinate.x, coordinate.y);
     context.strokeStyle = color;
-    context.arc(coordinate.x, coordinate.y, 5, 0, 2 * Math.PI);
+    context.arc(coordinate.x, coordinate.y, 7, 0, 2 * Math.PI);
     context.fillStyle = color;
+    
     context.fill();
     context.stroke();
+    
+    context.beginPath();
+    context.moveTo(coordinate.x, coordinate.y);
+    context.strokeStyle = "black";
+    context.arc(coordinate.x, coordinate.y, 2, 0, 2 * Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+    context.stroke();
+    
+    
 }
 function getRandomColor(){
     var letters = '0123456789ABCDEF';
@@ -133,4 +145,17 @@ function twoDecimals(longNumber){
     var shortNumber = parseFloat(longNumber).toFixed(2);
     
     return shortNumber;
+}
+function drawLabels(){
+    var canvas = document.getElementById("route-map");
+    var context = canvas.getContext('2d');
+    for (var i =0; i<points.length; i++){
+        context.beginPath();
+        context.font = "8.5px Georgia";
+        var name = points[i];
+        var coordinateX = (parseInt(coordinates[points[i]].x) +90) *1.5;
+        var coordinateY = (parseInt(coordinates[points[i]].y)+90) *1.5
+        context.fillText(name, coordinateX, coordinateY);
+        context.stroke();
+    }
 }

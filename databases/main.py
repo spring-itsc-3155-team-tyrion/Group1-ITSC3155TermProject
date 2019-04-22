@@ -4,7 +4,7 @@ import os
 
 ### parameters
 mainDir = os.getcwd()
-numStores = 4
+numStores = 5
 chanceToBeOrganic = 30 #percent
 priceVariance = 10 #percent
 organicPriceMultiplier = 1.10
@@ -14,6 +14,8 @@ numRecipes = 100
 numIngredientsTotal = numIngredientsPerStore + numStores*20 #20 extra ingredients per store
 availableIngredientsList = 'availableIngredientList.list'
 recipesList = 'recipes.list'
+manualIngredientsList = 'manualIngredientsList.list'
+manualRecipesList = 'manualRecipesList.list'
 
 try:
 	print('\n-----Creating availble ingredient list-----\n')
@@ -41,5 +43,15 @@ try:
 except Exception as e:
 	print('Exception found during creating recipe catalog: ' + str(e))
 	exit()
+
+try:
+	print('\n-----Injecting manual entries-----\n')
+	from library.modules import injectManualEntries
+	injectManualEntries.__main__(mainDir, manualIngredientsList, manualRecipesList, availableIngredientsList, recipesList, priceVariance, organicPriceMultiplier, chanceToBeOrganic)
+	print('Done')
+except Exception as e:
+	print('Exception found during injecting manual entries: ' + str(e))
+	exit()
+	
 
 print('')

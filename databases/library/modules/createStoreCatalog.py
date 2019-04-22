@@ -20,7 +20,7 @@ def __main__(wd, organicPriceMultiplier, priceVariance, chanceToBeOrganic, numIn
 			randomPrice = float(random.randint(int(minPrice*1000), int(maxPrice*1000))/1000.00)
 			chunk.write(ingredient + '\t' + str(randomPrice) + '\t' + 'non-organic' + '\n')
 			
-			if (random.randint(1,100) <= 30):
+			if (random.randint(1,100) <= chanceToBeOrganic):
 				chunk.write(ingredient + '\t' + str(randomPrice * float(organicPriceMultiplier)) + '\t' + 'organic' + '\n')
 	chunk.close()
 

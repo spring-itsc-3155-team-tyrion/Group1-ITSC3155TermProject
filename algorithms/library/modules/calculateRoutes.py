@@ -97,9 +97,11 @@ def getInformation_bestPriceAtStore(priceMatrix, ingredientDictionary):
         oppositeIngredient = ''
         if ingredient not in storeWithBestPriceMatrix.keys(): #if origincally selected ingredient was not found, checks all stores for opposite ingredient a.k.a., ingredient_003_non-organic --> ingredient_003_organic and vice versa
             if 'non' in ingredient:
-                oppositeIngredient = ingredient.split('_')[0] + '_' + ingredient.split('_')[1] + '_organic'
+                oppositeIngredient = ingredient.replace('non-organic', 'organic')
+                #oppositeIngredient = ingredient.split('_')[0] + '_' + ingredient.split('_')[1] + '_organic'
             else:
-                oppositeIngredient = ingredient.split('_')[0] + '_' + ingredient.split('_')[1] + '_non-organic'
+                oppositeIngredient = ingredient.replace('organic', 'non-organic')
+                #oppositeIngredient = ingredient.split('_')[0] + '_' + ingredient.split('_')[1] + '_non-organic'
             
             for store in priceMatrix:    
                 if oppositeIngredient in priceMatrix[store].keys():
@@ -157,18 +159,30 @@ def getTotalPrice_bestPriceAtStore(storeWithBestPriceMatrix, priceMatrix, ingred
     #this operation removes the _non-organic and _organic tags from ingredients in the ingredientDictionary
     stripped_countDictionary = {}
     for ingredient in ingredientDictionary:
-        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            temp = ingredient.replace('_organic', '')
+        else:
+            temp = ingredient.replace('_non-organic', '')
         stripped_countDictionary[temp] = ingredientDictionary[ingredient]
     
     #this operation removes the _non-organic and _organic tags from ingredients in the storeWithBestPriceMatrix
     stripped_storeDictionary = {}
     for ingredient in storeWithBestPriceMatrix:
-        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            temp = ingredient.replace('_organic', '')
+        else:
+            temp = ingredient.replace('_non-organic', '')
         stripped_storeDictionary[temp] = storeWithBestPriceMatrix[ingredient]
     
     totalIngredientCost = 0.0
     for ingredient in storeWithBestPriceMatrix:
-        ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            ingredient_stripped = ingredient.replace('_organic', '')
+        else:
+            ingredient_stripped = ingredient.replace('_non-organic', '')
         totalIngredientCost += float(stripped_countDictionary[ingredient_stripped]) * float(priceMatrix[stripped_storeDictionary[ingredient_stripped]][ingredient])
     
     return(totalIngredientCost + totalTravelCost)
@@ -177,18 +191,30 @@ def getShoppingList(storeWithBestPriceMatrix, priceMatrix, ingredientDictionary)
     #this operation removes the _non-organic and _organic tags from ingredients in the ingredientDictionary
     stripped_countDictionary = {}
     for ingredient in ingredientDictionary:
-        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            temp = ingredient.replace('_organic', '')
+        else:
+            temp = ingredient.replace('_non-organic', '')
         stripped_countDictionary[temp] = ingredientDictionary[ingredient]
     
     #this operation removes the _non-organic and _organic tags from ingredients in the storeWithBestPriceMatrix
     stripped_storeDictionary = {}
     for ingredient in storeWithBestPriceMatrix:
-        temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #temp = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            temp = ingredient.replace('_organic', '')
+        else:
+            temp = ingredient.replace('_non-organic', '')
         stripped_storeDictionary[temp] = storeWithBestPriceMatrix[ingredient]
     
     shoppingDictionary = {}
     for ingredient in storeWithBestPriceMatrix:
-        ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        #ingredient_stripped = ingredient.split('_')[0] + '_' + ingredient.split('_')[1]
+        if '_organic' in ingredient:
+            ingredient_stripped = ingredient.replace('_organic', '')
+        else:
+            ingredient_stripped = ingredient.replace('_non-organic', '')
         ingredient_count = stripped_countDictionary[ingredient_stripped]
         ingredient_store = stripped_storeDictionary[ingredient_stripped]
         

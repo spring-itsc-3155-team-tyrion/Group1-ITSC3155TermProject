@@ -1,19 +1,23 @@
 var colors = [];
 var coordinates;
 var points;
-var routeOrder
+var routeOrder;
+
+
 
 function sendJson(json){
     // send json to the functions that use it
     drawCanvas(json);
     displayData(json);
+    
 }
 
 function drawCanvas(json){
+    
     // Get coordinates
     coordinates = json.coordinate_matrix;
     points = Object.keys(coordinates); // list of keys for the coordinate points
-    drawLabels();
+    drawLabels(); // Label all the coordinates on the canvas map
     
     // Translate coordinates to canvas coordinates
     for(var i = 0; i<points.length; i++){
@@ -45,52 +49,72 @@ function drawCanvas(json){
 }
 
 function displayData(json){
+    
     // Shopping List
-    var shoppingList = json.shopping_list;
-    var ingredientList = Object.keys(shoppingList);
-    for(var i = 0; i<ingredientList.length; i++){
-        var last = ingredientList.length-1;
-        if(i == last){
-            $('#shopping-list .value').append(ingredientList[i]);
-        }else{
-            $('#shopping-list .value').append(ingredientList[i] + ", ");
+        // Loop through Stores
+    
+    for (var i =1; i<(routeOrder.length-1); i++){ // store loop, skipping origin
+        // Get current store
+        var storeName = routeOrder[i];
+        // clone store element to edit
+        var clone = $('.store-original').clone();
+        clone.removeClass("store-original hidden").addClass("store").attr("id", storeName);
+        
+        // Add storeName as title
+        var title = clone.find(".title");
+        title.append(storeName);
+        
+        // Update color swatch to the corresponding color
+        var colorSwatch = clone.find(".color-swatch");
+        colorSwatch.css("background-color", colors[(i-1)]);
+        
+        
+        
+        var valueList = clone.find(".value-list");
+        // Get all ingredients
+        var shoppingList = json.shopping_list;
+        var ingredientList = Object.keys(shoppingList);
+        for(var item = 0; item < ingredientList.length; item++){
+            // Add ingredients for that store
+            var currentStore = shoppingList[ingredientList[item]].ingredient_store.toString();
+            var ingredient = ingredientList[item];
+            var value = clone.find(".value-original").clone();
+            if(currentStore == storeName.toString()){
+                
+                value.removeClass("value-original").addClass("ingredient-value").attr("id", ingredient);
+                value.text(ingredient);
+                
+                valueList.append(value);
+            }
+            clone.append(valueList);
         }
+        $('#shopping-list').append(clone);
     }
     
     // Substituted Items
     var subItems = json.substituted_ingredients;
     for(var i=0;i<subItems.length; i++){
-        var last = subItems.length-1;
-        if(i == last){
-            $('#sub-items .value').append(subItems[i]);
-        }else{
-            $('#sub-items .value').append(subItems[i] + ", ");
-        }
+        $('#sub-items .value').append(subItems[i].toString() + "</br>");
     }
     // Unavailable Items
     var naItems = json.completely_unavailable_ingredients;
     for(var i=0;i<naItems.length; i++){
-        var last = naItems.length-1;
-        if(i == last){
-            $('#na-items .value').append(naItems[i]);
-        }else{
-            $('#na-items .value').append(naItems[i] + ", ");
-        }
+        $('#na-items .value').append(naItems[i].toString() + "</br>");
     }
     // Cost of Ingredients
     var itemCost = json.price_ingredients;
     itemCost = twoDecimals(itemCost);
-    $('#ingredient-cost .value').text(itemCost);
+    $('#ingredient-cost .value').text("$" + itemCost);
     
     // Cost of Route
     var gasCost = json.price_route;
     gasCost = twoDecimals(gasCost);
-    $('#route-cost .value').text(gasCost);
+    $('#route-cost .value').text("$" + gasCost);
     
     // Total Price
     var total = json.price_total;
     total = twoDecimals(total);
-    $('#total-cost .value').text(total);
+    $('#total-cost .value').text("$" + total);
 }
 
 
@@ -113,15 +137,16 @@ function drawPoint(coordinate){
     var color = getRandomColor();
     colors.push(color);
     
+    // Colored Circle around coordinate point
     context.beginPath();
     context.moveTo(coordinate.x, coordinate.y);
     context.strokeStyle = color;
     context.arc(coordinate.x, coordinate.y, 7, 0, 2 * Math.PI);
     context.fillStyle = color;
-    
     context.fill();
     context.stroke();
     
+    // Black circle for coordinate point
     context.beginPath();
     context.moveTo(coordinate.x, coordinate.y);
     context.strokeStyle = "black";
@@ -147,14 +172,15 @@ function twoDecimals(longNumber){
     return shortNumber;
 }
 function drawLabels(){
+    // Draw labels above all coordinate points
     var canvas = document.getElementById("route-map");
     var context = canvas.getContext('2d');
     for (var i =0; i<points.length; i++){
         context.beginPath();
         context.font = "8.5px Georgia";
         var name = points[i];
-        var coordinateX = (parseInt(coordinates[points[i]].x) +90) *1.5;
-        var coordinateY = (parseInt(coordinates[points[i]].y)+90) *1.5
+        var coordinateX = (parseInt(coordinates[points[i]].x) +107) *1.5;
+        var coordinateY = (parseInt(coordinates[points[i]].y)+102) *1.5
         context.fillText(name, coordinateX, coordinateY);
         context.stroke();
     }

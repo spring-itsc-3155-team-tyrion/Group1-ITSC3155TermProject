@@ -31,33 +31,46 @@
                 <canvas id="route-map" height= "300px" width="300px"></canvas>
                 </p>
                 
+                    
                 
             </div>
-            <div did="calculation-info">
-                <div class="data" id="shopping-list">
-                    <span class="title">Shopping List: </span>
-                    <span class="value"></span>
+            
+            <div class="data" id="shopping-list">
+                <div class="content-title">Shopping List:</div>
+                <div class="store-original hidden">
+                    <span class="color-swatch"></span>
+                    <span class="title"> </span>
+                    <span class="value-list">
+                        <p class="value-original"></p>
+                    </span>
                 </div>
+                
+            </div>
+            <div id="calculation-info">
                 <div class="data" id="sub-items">
                     <span class="title">Substituted Items: </span>
-                    <span class="value"></span>
+                    <p class="value"></p>
                 </div>
+                <hr>
                 <div class="data" id="na-items">
                     <span class="title">Not Available Items: </span>
-                    <span class="value"></span>
+                    <p class="value"></p>
                 </div>
+                <hr>
                 <div class="data" id="ingredient-cost">
-                    <span class="title">Ingredient Cost: $</span>
-                    <span class="value"></span>
+                    <span class="title">Ingredient Cost: </span>
+                    <p class="value"></p>
                 </div>
+                <hr>
                 <div class="data" id="route-cost">
-                    <span class="title">Gas Cost: $</span>
-                    <span class="value"></span>
+                    <span class="title">Gas Cost: </span>
+                    <p class="value"></p>
                 </div>
                 <div class="data" id="total-cost">
-                    <span class="title">Total: $</span>
-                    <span class="value"></span>
+                    <span class="title">Total: </span>
+                    <p class="value"></p>
                 </div>
+                
             </div>
             
         </div>

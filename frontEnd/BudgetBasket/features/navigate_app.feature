@@ -11,7 +11,10 @@ Feature: Navigate from home page to allRecipes page
     
   Scenario: As a user I want to be able to navigate from the allRecipes page to the basket page
     Given I am on the allRecipes page
-    When I click on the "Add Recipe(s) to Basket" link
+    When I click on the "View My Basket" link
     Then I should be on the "Basket Ingredients" page
-   
     
+  Scenario: As a user I want to be able to navigate from the basket page to the calculation page
+    Given I am on the basket page
+    When I click on the "View My Shopping Plan" link
+    Then I should be on the "Calculation" page

@@ -26,62 +26,14 @@
             "y": "49"
         }
     }, 
-    "price_ingredients": 60.87569999999999, 
-    "price_route": 3.2209264725347335, 
-    "price_total": 64.09662647253472, 
-    "route_distance": 322.09264725347333, 
+    "price_ingredients": 0.0, 
+    "price_route": 0.0, 
+    "price_total": 0.0, 
+    "route_distance": 0.0, 
     "route_order": [
         "origin", 
-        "store_0", 
-        "store_2", 
-        "store_3", 
         "origin"
     ], 
-    "shopping_list": {
-        "ingredient_010_organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_025_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_040_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_045_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_051_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_064_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_106_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_112_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_122_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_148_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_177_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }
-    }, 
+    "shopping_list": {}, 
     "substituted_ingredients": []
 }

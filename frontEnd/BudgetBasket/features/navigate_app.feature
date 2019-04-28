@@ -1,8 +1,8 @@
-Feature: Navigate from home page to allRecipes page
+Feature: Navigate from home page to calculation page
   
   As a user
   So that I can easily navigate my app
-  I want to navigate from the home page to the allRecipes page
+  I want to navigate from the home page to the calculation page
   
   Scenario: As a user I want to be able to navigate from the home page to the allRecipes page
     Given I am on the home page

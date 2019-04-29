@@ -28,6 +28,7 @@
             "y": "49"
         }
     }, 
+<<<<<<< HEAD
     "price_ingredients": 113.82700000000001, 
     "price_route": 3.849409535008206, 
     "price_total": 117.67640953500822, 
@@ -115,5 +116,16 @@
             "ingredient_store": "store_2"
         }
     }, 
+=======
+    "price_ingredients": 0.0, 
+    "price_route": 0.0, 
+    "price_total": 0.0, 
+    "route_distance": 0.0, 
+    "route_order": [
+        "origin", 
+        "origin"
+    ], 
+    "shopping_list": {}, 
+>>>>>>> dce5ab5a94fd2e1b1b7e3aad16f3bdd0e7752a54
     "substituted_ingredients": []
 }

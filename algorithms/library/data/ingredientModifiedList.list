@@ -1,4 +1,5 @@
 #ingredient_name	ingredient_count	ingredient_tag
+<<<<<<< HEAD
 chicken	1	non-organic
 barbeque_sauce	1	non-organic
 italian_dressing	1	non-organic
@@ -18,3 +19,5 @@ ingredient_145	1	non-organic
 ingredient_025	1	non-organic
 ingredient_068	1	non-organic
 ingredient_001	1	non-organic
+=======
+>>>>>>> dce5ab5a94fd2e1b1b7e3aad16f3bdd0e7752a54

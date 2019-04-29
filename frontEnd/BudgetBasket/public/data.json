@@ -1,5 +1,7 @@
 {
-    "completely_unavailable_ingredients": [], 
+    "completely_unavailable_ingredients": [
+        "ingredient_043_non-organic"
+    ], 
     "coordinate_matrix": {
         "origin": {
             "x": "0", 
@@ -26,61 +28,91 @@
             "y": "49"
         }
     }, 
-    "price_ingredients": 60.87569999999999, 
-    "price_route": 3.2209264725347335, 
-    "price_total": 64.09662647253472, 
-    "route_distance": 322.09264725347333, 
+    "price_ingredients": 113.82700000000001, 
+    "price_route": 3.849409535008206, 
+    "price_total": 117.67640953500822, 
+    "route_distance": 384.94095350082057, 
     "route_order": [
         "origin", 
-        "store_0", 
         "store_2", 
         "store_3", 
+        "store_1", 
+        "store_0", 
+        "store_4", 
         "origin"
     ], 
     "shopping_list": {
-        "ingredient_010_organic": {
+        "barbeque_sauce_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_3"
+            "ingredient_store": "store_2"
+        }, 
+        "brown_sugar_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "chicken_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_001_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
         }, 
         "ingredient_025_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_040_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_045_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_051_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
-        }, 
-        "ingredient_064_non-organic": {
+        "ingredient_047_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_3"
         }, 
-        "ingredient_106_non-organic": {
+        "ingredient_049_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_068_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_112_non-organic": {
+        "ingredient_096_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_109_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_124_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_1"
+        }, 
+        "ingredient_143_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_4"
+        }, 
+        "ingredient_145_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_0"
         }, 
-        "ingredient_122_non-organic": {
+        "ingredient_154_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_0"
+            "ingredient_store": "store_2"
         }, 
-        "ingredient_148_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_0"
+        "ingredient_155_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
         }, 
-        "ingredient_177_non-organic": {
+        "ingredient_156_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_3"
+            "ingredient_store": "store_2"
+        }, 
+        "italian_dressing_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "worcestershire_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
         }
     }, 
     "substituted_ingredients": []

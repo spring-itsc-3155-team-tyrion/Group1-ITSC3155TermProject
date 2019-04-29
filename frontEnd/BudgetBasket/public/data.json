@@ -1,7 +1,5 @@
 {
-    "completely_unavailable_ingredients": [
-        "ingredient_043_non-organic"
-    ], 
+    "completely_unavailable_ingredients": [], 
     "coordinate_matrix": {
         "origin": {
             "x": "0", 
@@ -28,10 +26,9 @@
             "y": "49"
         }
     }, 
-<<<<<<< HEAD
-    "price_ingredients": 113.82700000000001, 
+    "price_ingredients": 45.986200000000004, 
     "price_route": 3.849409535008206, 
-    "price_total": 117.67640953500822, 
+    "price_total": 49.83560953500821, 
     "route_distance": 384.94095350082057, 
     "route_order": [
         "origin", 
@@ -43,89 +40,48 @@
         "origin"
     ], 
     "shopping_list": {
-        "barbeque_sauce_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "brown_sugar_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "chicken_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_001_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_025_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_047_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_049_non-organic": {
+        "ingredient_027_organic": {
             "ingredient_count": "2", 
-            "ingredient_store": "store_3"
-        }, 
-        "ingredient_068_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_096_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_109_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_2"
-        }, 
-        "ingredient_124_non-organic": {
-            "ingredient_count": "1", 
             "ingredient_store": "store_1"
         }, 
-        "ingredient_143_non-organic": {
-            "ingredient_count": "1", 
-            "ingredient_store": "store_4"
+        "ingredient_050_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_1"
         }, 
-        "ingredient_145_non-organic": {
+        "ingredient_064_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_0"
+            "ingredient_store": "store_3"
         }, 
-        "ingredient_154_non-organic": {
+        "ingredient_104_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_3"
         }, 
-        "ingredient_155_non-organic": {
+        "ingredient_109_non-organic": {
             "ingredient_count": "2", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_156_non-organic": {
+        "ingredient_116_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_117_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "italian_dressing_non-organic": {
+        "ingredient_143_non-organic": {
+            "ingredient_count": "2", 
+            "ingredient_store": "store_4"
+        }, 
+        "ingredient_146_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "worcestershire_non-organic": {
+        "ingredient_153_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_2"
+            "ingredient_store": "store_0"
         }
     }, 
-=======
-    "price_ingredients": 0.0, 
-    "price_route": 0.0, 
-    "price_total": 0.0, 
-    "route_distance": 0.0, 
-    "route_order": [
-        "origin", 
-        "origin"
-    ], 
-    "shopping_list": {}, 
->>>>>>> dce5ab5a94fd2e1b1b7e3aad16f3bdd0e7752a54
-    "substituted_ingredients": []
+    "substituted_ingredients": [
+        "ingredient_143_organic"
+    ]
 }

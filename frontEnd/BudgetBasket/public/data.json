@@ -26,35 +26,66 @@
             "y": "49"
         }
     }, 
-    "price_ingredients": 45.986200000000004, 
-    "price_route": 3.849409535008206, 
-    "price_total": 49.83560953500821, 
-    "route_distance": 384.94095350082057, 
+    "price_ingredients": 110.29639999999999, 
+    "price_route": 3.509792035257689, 
+    "price_total": 113.80619203525768, 
+    "route_distance": 350.97920352576887, 
     "route_order": [
         "origin", 
         "store_2", 
-        "store_3", 
         "store_1", 
-        "store_0", 
+        "store_3", 
         "store_4", 
         "origin"
     ], 
     "shopping_list": {
-        "ingredient_027_organic": {
+        "barbeque_sauce_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "brown_sugar_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "chicken_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_001_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_027_non-organic": {
             "ingredient_count": "2", 
-            "ingredient_store": "store_1"
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_040_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_049_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
         }, 
         "ingredient_050_non-organic": {
             "ingredient_count": "2", 
             "ingredient_store": "store_1"
         }, 
-        "ingredient_064_non-organic": {
+        "ingredient_073_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_3"
+            "ingredient_store": "store_2"
         }, 
-        "ingredient_104_non-organic": {
+        "ingredient_096_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_3"
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_103_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_105_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
         }, 
         "ingredient_109_non-organic": {
             "ingredient_count": "2", 
@@ -64,7 +95,11 @@
             "ingredient_count": "2", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_117_non-organic": {
+        "ingredient_125_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "ingredient_142_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
@@ -72,16 +107,34 @@
             "ingredient_count": "2", 
             "ingredient_store": "store_4"
         }, 
-        "ingredient_146_non-organic": {
+        "ingredient_155_organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_1"
+        }, 
+        "ingredient_156_non-organic": {
             "ingredient_count": "1", 
             "ingredient_store": "store_2"
         }, 
-        "ingredient_153_non-organic": {
+        "ingredient_172_non-organic": {
             "ingredient_count": "1", 
-            "ingredient_store": "store_0"
+            "ingredient_store": "store_2"
+        }, 
+        "ingredient_177_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_3"
+        }, 
+        "italian_dressing_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
+        }, 
+        "worcestershire_non-organic": {
+            "ingredient_count": "1", 
+            "ingredient_store": "store_2"
         }
     }, 
     "substituted_ingredients": [
-        "ingredient_143_organic"
+        "brown_sugar_organic", 
+        "chicken_organic", 
+        "barbeque_sauce_organic"
     ]
 }

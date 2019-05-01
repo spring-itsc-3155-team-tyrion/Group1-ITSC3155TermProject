@@ -6,5 +6,5 @@ Feature: Empty basket
   
 Scenario: As a user I want to be able to empty the basket
   Given I am on the basket page
-  When I click on the "resetBasket" link
+  When I click on the "Empty Basket" link
   Then I should empty the basket

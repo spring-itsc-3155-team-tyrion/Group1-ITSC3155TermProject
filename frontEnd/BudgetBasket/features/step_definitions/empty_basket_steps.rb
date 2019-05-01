@@ -3,5 +3,5 @@ Given("I click the Empty Basket link") do
 end
 
 Then("I should empty the basket") do
-    
+    visit basket_path
 end
